@@ -10,7 +10,13 @@ body {
 }
 
 #nav {
+    background-color:#FFFFFF;
+    float:left;
+	padding: 10px;
 }
 
 #content {
+	float: left;
+	width: 1000px;
+	padding: 10px;
 }
