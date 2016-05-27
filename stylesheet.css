@@ -2,20 +2,25 @@
 /* CSS Document */
 
 body {
-	background-color:#C5F3CB;
+	background-color:#ffedbd;
 }
 
 #header {
 	background-color:#FFFFFF;
-}
-
-#nav {
-    background-color:#FFFFFF;
-    float:left;
 	padding: 10px;
 }
 
-#content {
-	float: left;
-	padding: 10px;
+
+
+p {
+	padding-left: 10px;
+	padding-bottom:2px;
+}
+
+p:hover {
+	background-color:#FFF;
+}
+
+a:hover {
+	color:#F00;
 }
