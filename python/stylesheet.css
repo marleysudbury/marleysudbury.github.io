@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	background-color:#ffedbd;
+	background-color:#c9d3ff;
 	padding: 10px;
 	border: double;
 }
@@ -22,4 +22,9 @@ p {
 
 a:hover {
 	color:#F00;
+}
+
+#projects {
+	column-count: 2;
+	column-width: 100px;
 }
