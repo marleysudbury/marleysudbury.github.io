@@ -17,10 +17,6 @@ p {
 	padding-bottom:2px;
 }
 
-p:hover {
-	background-color:#FFF;
-}
-
 a:hover {
 	color:#F00;
 }
