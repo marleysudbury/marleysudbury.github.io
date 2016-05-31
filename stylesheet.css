@@ -29,7 +29,12 @@ a:hover {
 	color:#F00;
 }
 
-.hiddentxt:focus + .hiddenimg{
+.hiddentxt a{
+	color:#F00;
+	text-decoration:none;
+}
+
+.hiddentxt:hover + .hiddenimg{
 	display:block;
 }
 
