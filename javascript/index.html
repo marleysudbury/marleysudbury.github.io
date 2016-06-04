@@ -24,7 +24,7 @@ javascript
 Thanks to <a href="http://www.w3schools.com">w3schools.com</a> for teaching me to use javascript, and the users of <a href="http://www.stackoverflow.com">stackoverflow.com</a> for having answers for basically any question :)
 </p>
 <p>
-<font size="+3"><b>My First JavaScript</b></font>
+<font size="+3"><b>Babbies First JavaScript</b></font>
 </p>
 <p>
 <script>
@@ -60,12 +60,40 @@ function toggleFunction(){
 <span id="toggleText">Hello</span> - Featuring jQuery.
 </p>
 <p>
-Potential uses for these technological <span class="hiddentxt"><a href="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif">leaps and bounds</a></span> are practically unlimited. However, for me, this is all for tonight.
+Potential uses for these technological <span class="hiddentxt"><a href="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif">leaps and bounds</a></span> are practically unlimited. I can assure your I shall not make use of the full potential.
 <span class="hiddenimg"><img src="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif" width="250" /></span>
 </p>
 <p>
-Click <a href="../">here</a> to return to the home page.
+Videos
 </p>
+<p>
+<script>
+function vidPlay() {  
+    video1.play();  
+} 
+function vidPause() {
+	video1.pause();
+}
+function playPause() { 
+    if (video1.paused) 
+        video1.play(); 
+    else 
+        video1.pause(); 
+} 
+</script>
+<video id="video1" width="810" loop>
+<source src="lottery.mp4" />
+</video><br />
+<button onclick="playPause()">Play/Pause</button>
+<span onmouseover="vidPlay()" onmouseout="vidPause()">PLAY/PAUSE</span>
+</p>
+<p>
+This can also be used in conjunction with hover text, see my <a href="http://codepen.io/marleysudbury/pen/bedYVq">codepen.io</a>
+</p>
+<iframe height='712' scrolling='no' src='http://codepen.io/marleysudbury/embed/bedYVq/?height=712&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/marleysudbury/pen/bedYVq/'>CSS Text:hover show image</a> by Marley Sudbury (<a href='http://codepen.io/marleysudbury'>@marleysudbury</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+<p>
+Click <a href="../">here</a> to return to the home page.
 </p>
 </body>
 </html>
