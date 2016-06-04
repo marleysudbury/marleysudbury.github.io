@@ -34,7 +34,7 @@ a:hover {
 	text-decoration:none;
 }
 
-.hiddentxt:hover + .hiddenimg{
+.hiddentxt:hover ~ .hiddenimg{
 	display:block;
 }
 
