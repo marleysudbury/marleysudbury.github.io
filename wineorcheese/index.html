@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Wine or Cheese? - Marley Sudbury</title>
+<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+<link rel="icon" 
+      type="image/png" 
+      href="../apple-touch-icon.png">
+<style>
+body{
+	background-color:#cc0066;
+}
+#adv2{
+  display:none;
+}
+#adv3{
+  display:none;
+}
+#die{
+	display:none;
+}
+</style>
+</head>
+
+<body>
+<script>
+function wine() {
+document.getElementById('adv2');
+adv2.style.display = "block";
+document.getElementById('adv1').innerHTML = '<p>Choose one.</p><p><button>Wine</button><p>';
+}
+function cheese() {
+document.getElementById('adv3');
+adv3.style.display = "block";
+document.getElementById('adv1').innerHTML = '<p>Choose one.</p><p><button>Cheese</button><p>';
+}
+function bear(){
+document.getElementById('die');
+die.style.display = "block";
+document.getElementById('adv2').innerHTML = '<p>You chose wine.</p><p><button>Bear</button><p>';
+}
+function noBear(){
+document.getElementById('die');
+die.style.display = "block";
+document.getElementById('adv2').innerHTML = '<p>You chose wine.</p><p><button>No bear</button><p>';
+}
+</script>
+<div id="header">
+<font size="+3"><b>Marley Sudbury</b></font><br />
+wine or cheese?
+</div>
+<p>
+A text adventure, inspired by <a href="https://www.youtube.com/haatfilms">Hat Films</a>.
+</p>
+<span id="adv1">
+<p> 
+Choose one.
+</p>
+<p>
+<button onclick="wine()">Wine</button>
+<button onclick="cheese()">Cheese</button>
+</p>
+</span>
+<span id="adv2">
+<p>
+You chose wine.
+</p>
+<p>
+<button onclick="bear()">Bear</button>
+<button onclick="noBear()">No Bear</button>
+  
+</p>
+</span>
+<p>
+  <span id="adv3">
+    You chose cheese.
+  </span>
+</p>
+<p>
+  <span id="die">
+    You have died.
+  </span>
+</p>
+</body>
+</html>
