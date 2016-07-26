@@ -30,13 +30,6 @@ body{
   ga('create', 'UA-51649065-2', 'auto');
   ga('send', 'pageview');
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2639642297478555",
-    enable_page_level_ads: true
-  });
-</script>
 </head>
 
 <body>
@@ -61,13 +54,22 @@ document.getElementById('die');
 die.style.display = "block";
 document.getElementById('adv2').innerHTML = '<p>You chose wine.</p><p><button>No bear</button><p>';
 }
+function rules(){
+	alert("Initial choice of wine or cheese decides what you are given at the start of your adventure.\n\nThe aim is too survive, and the best way to achieve this (not that it works) is to avoid bears. Whilst not the only hazard, they are the most numerous and dangerous.\n\nYou know the game is over when you see the text 'You have died.'\n\nGood luck and have fun!");
+}
+function beta(){
+	alert("The [BETA] tag means that a page or feature is not completed, and may not work as intended.");
+}
 </script>
 <div id="header">
 <font size="+3"><b>Marley Sudbury</b></font><br />
-wine or cheese?
+wine or cheese? <font color="#FF0000">[BETA]</font><sup>[<span onclick="beta()"><a href="javascript:;">?</a></span>]</sup>
 </div>
 <p>
 A text adventure, inspired by <a href="https://www.youtube.com/haatfilms">Hat Films</a>.
+</p>
+<p>
+Click <span onclick="rules()"><a href="javascript:;">here</a></span> for some concise rules.
 </p>
 <span id="adv1">
 <p> 
