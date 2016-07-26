@@ -11,14 +11,53 @@
 body{
 	background-color:#cc0066;
 }
-#adv2{
+#wine{
   display:none;
 }
-#adv3{
+#cheese{
+  display:none;
+}
+#drink{
+  display:none;
+}
+#leave{
+  display:none;
+}
+#sleep{
+  display:none;
+}
+#drink2{
+  display:none;
+}
+#leave2{
+  display:none;
+}
+#sleep2{
+  display:none;
+}
+#eat{
+  display:none;
+}
+#row{
+  display:none;
+}
+#jump{
+  display:none;
+}
+#eat2{
+  display:none;
+}
+#row2{
+  display:none;
+}
+#jump2{
   display:none;
 }
 #die{
 	display:none;
+}
+#hide{
+	
 }
 </style>
 <script>
@@ -35,14 +74,24 @@ body{
 <body>
 <script>
 function wine() {
-document.getElementById('adv2');
-adv2.style.display = "block";
-document.getElementById('adv1').innerHTML = '<p>Choose one.</p><p><button>Wine</button><p>';
+document.getElementById('wine').style.display = "block";
+document.getElementById('choose').innerHTML = '<p>Choose one.</p><p><button>Wine</button><p>';
+}
+function drink() {
+document.getElementById('drink').style.display = "block";
+document.getElementById('wine').innerHTML = '<p>You are in the middle of a forest clearing. You have a bottle of fine vintage red wine. What do you do?</p><p><button>Drink the wine</button><p>';
+}
+function leave() {
+document.getElementById('leave').style.display = "block";
+document.getElementById('wine').innerHTML = '<p>You are in the middle of a forest clearing. You have a bottle of fine vintage red wine. What do you do?</p><p><button>Leave the clearing</button><p>';
+}
+function sleep() {
+document.getElementById('sleep').style.display = "block";
+document.getElementById('wine').innerHTML = '<p>You are in the middle of a forest clearing. You have a bottle of fine vintage red wine. What do you do?</p><p><button>Go to sleep</button><p>';
 }
 function cheese() {
-document.getElementById('adv3');
-adv3.style.display = "block";
-document.getElementById('adv1').innerHTML = '<p>Choose one.</p><p><button>Cheese</button><p>';
+document.getElementById('cheese').style.display = "block";
+document.getElementById('choose').innerHTML = '<p>Choose one.</p><p><button>Cheese</button><p>';
 }
 function bear(){
 document.getElementById('die');
@@ -66,12 +115,12 @@ function beta(){
 wine or cheese? <font color="#FF0000">[BETA]</font><sup>[<span onclick="beta()"><a href="javascript:;">?</a></span>]</sup>
 </div>
 <p>
-A text adventure, inspired by <a href="https://www.youtube.com/haatfilms">Hat Films</a>.
+A text adventure, inspired by <a href="https://www.youtube.com/haatfilms">Hat Films</a>. If you have any recommendations for paths in the game tweet me <a href="https://www.twitter.com/MarleySR_">@MarleySR_</a>.
 </p>
 <p>
 Click <span onclick="rules()"><a href="javascript:;">here</a></span> for some concise rules.
 </p>
-<span id="adv1">
+<span id="choose">
 <p> 
 Choose one.
 </p>
@@ -80,28 +129,76 @@ Choose one.
 <button onclick="cheese()">Cheese</button>
 </p>
 </span>
-<span id="adv2">
+
+<span id="hide">
+<span id="wine">
 <p>
-You chose wine.
+You are in the middle of a forest clearing. You have a bottle of fine vintage red wine. What do you do?
 </p>
 <p>
-<button onclick="bear()">Bear</button>
-<button onclick="noBear()">No Bear</button>
-</p>
-</span>
-<span id="adv3">
-<p>
-You chose cheese.
-</p>
-<p>
-<button onclick="bear()">Bear</button>
-<button onclick="noBear()">No Bear</button>
+<button onclick="drink()">Drink the wine</button>
+<button onclick="leave()">Leave the clearing</button>
+<button onclick="sleep()">Go to sleep</button>
 </p>
 </span>
+<span id="drink">
+<p>
+The wine is incredibly wet. You feel it would go well with a musky cheese. A burning sensation quickly spreads through your body, and then disapears. What do you do?
+</p>
+<p>
+<button onclick="drink2()">Drink more of the wine</button>
+<button onclick="leave2()">Leave the clearing</button>
+<button onclick="sleep2()">Go to sleep</button>
+</p>
+</span>
+<span id="leave">
+<p>
+You scramble through the thick branches and nettles for hours, mostly in pith blackness. When at last you suddenly emerge, you are at the base of a steep cliff face. What do you do?
+</p>
+<p>
+<button onclick="drink3()">Drink the wine</button>
+<button onclick="climb()">Climb the cliff face</button>
+<button onclick="back()">Go back to the clearing</button>
+</p>
+</span>
+<span id="sleep">
+<p>
+You slowly fall into an uneasy sleep, full of night terrors, despite it being near mid-day. You are awoken by a loud growl from beyond the trees. What do you do?
+</p>
+<p>
+<button onclick="drink4()">Drink the wine</button>
+<button onclick="leave3()">Leave the clearing</button>
+<button onclick="sleep3()">Go back to sleep</button>
+</p>
+</span>
+
+<span id="cheese">
+<p>
+You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?
+</p>
+<p>
+<button onclick="eat()">Eat the cheese</button>
+<button onclick="row()">Row the boat</button>
+<button onclick="jump()">Jump out the boat</button>
+</p>
+</span>
+<span id="eat">
+<p>
+The cheese has a musky palette. You wish you had a bottle of fine vintage red wine to wash it down. It is incredibly filling.
+</p>
+<p>
+<button onclick="eat2()">Eat more of the cheese</button>
+<button onclick="row2()">Row the boat</button>
+<button onclick="jump2()">Jump out the boat</button>
+</p>
+</span>
+
 <span id="die">
 <p>
 You have died.
 </p>
 </span>
+</span>
+<a href="javascript:window.location.reload();">Click here to restart.</a>
 </body>
 </html>
