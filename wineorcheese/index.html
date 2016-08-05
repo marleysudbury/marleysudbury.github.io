@@ -93,6 +93,18 @@ function cheese() {
 document.getElementById('cheese').style.display = "block";
 document.getElementById('choose').innerHTML = '<p>Choose one.</p><p><button>Cheese</button><p>';
 }
+function eat() {
+document.getElementById('eat').style.display = "block";
+document.getElementById('cheese').innerHTML = '<p>You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?</p><p><button>Eat the cheese</button><p>';
+}
+function row() {
+document.getElementById('eat').style.display = "block";
+document.getElementById('cheese').innerHTML = '<p>You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?</p><p><button>Eat the cheese</button><p>';
+}
+function jump() {
+document.getElementById('eat').style.display = "block";
+document.getElementById('cheese').innerHTML = '<p>You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?</p><p><button>Eat the cheese</button><p>';
+}
 function bear(){
 document.getElementById('die');
 die.style.display = "block";
@@ -141,6 +153,27 @@ You are in the middle of a forest clearing. You have a bottle of fine vintage re
 <button onclick="sleep()">Go to sleep</button>
 </p>
 </span>
+<span id="cheese">
+<p>
+You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?
+</p>
+<p>
+<button onclick="eat()">Eat the cheese</button>
+<button onclick="row()">Row the boat</button>
+<button onclick="jump()">Jump out the boat</button>
+</p>
+</span>
+
+<span id="eat">
+<p>
+The cheese has a musky palette. You wish you had a bottle of fine vintage red wine to wash it down. It is incredibly filling.
+</p>
+<p>
+<button onclick="eat2()">Eat more of the cheese</button>
+<button onclick="row2()">Row the boat</button>
+<button onclick="jump2()">Jump out of the boat</button>
+</p>
+</span>
 <span id="drink">
 <p>
 The wine is incredibly wet. You feel it would go well with a musky cheese. A burning sensation quickly spreads through your body, and then disapears. What do you do?
@@ -171,25 +204,21 @@ You slowly fall into an uneasy sleep, full of night terrors, despite it being ne
 <button onclick="sleep3()">Go back to sleep</button>
 </p>
 </span>
-
-<span id="cheese">
+<span id="row">
 <p>
-You are on a small row boat in the middle of a great lake. You can not make out any distinct shore owing to a thick fog. You have a heavy wheel of cheese. What do you do?
+There are no oars on the boat. You furiously try to paddle with your hands, but the boat never moves, and eventually they fall off due to frostbite.
 </p>
 <p>
-<button onclick="eat()">Eat the cheese</button>
-<button onclick="row()">Row the boat</button>
-<button onclick="jump()">Jump out the boat</button>
+<button onclick="drink4()">Eat the cheese</button>
+<button onclick="leave3()">Jump out of the boat</button>
 </p>
 </span>
-<span id="eat">
+<span id="jump">
 <p>
-The cheese has a musky palette. You wish you had a bottle of fine vintage red wine to wash it down. It is incredibly filling.
+You jump into the water with 'all the grace of reversing dump truck with no tires on,' but quickly discover you lack the ability to swim, or even stay afloat. As you sink into the abyss, you feel the life fade out of you.
 </p>
 <p>
-<button onclick="eat2()">Eat more of the cheese</button>
-<button onclick="row2()">Row the boat</button>
-<button onclick="jump2()">Jump out the boat</button>
+<button onclick="drink4()">...</button>
 </p>
 </span>
 
