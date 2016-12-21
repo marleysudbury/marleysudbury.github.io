@@ -1,7 +1,7 @@
 var circles = [];
 
 function setup(){
-  createCanvas(640, 360);
+  createCanvas(windowWidth, windowHeight);
 
   while (circles.length < 200){
   //for (var i = 0; i < 25; i++){
