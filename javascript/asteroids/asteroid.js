@@ -42,6 +42,7 @@ function Asteroid(pos, r) {
     var newA = [];
     newA[0] = new Asteroid(this.pos, this.r);
     newA[1] = new Asteroid(this.pos, this.r);
+    score++;
     return newA;
   }
 

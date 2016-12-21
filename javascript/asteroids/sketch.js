@@ -4,8 +4,8 @@ var missiles = [];
 var score = 0;
 
 function setup(){
-  //createCanvas(windowWidth, windowHeight);
-  createCanvas(600, 300);
+  createCanvas(windowWidth-50, windowHeight-50);
+  // createCanvas(600, 300);
   ship = new Ship();
   for (var i = 0; i < 5; i++) {
     asteroids.push(new Asteroid());
@@ -14,6 +14,11 @@ function setup(){
 
 function draw(){
   background(0);
+  if (asteroids.length < 5) {
+    newPos = createVector(0, 0)
+    newR = random(15,50)
+    asteroids.push(new Asteroid(newPos, newR));
+  }
   for (var i = 0; i < asteroids.length; i++) {
     if (ship.hits(asteroids[i])) {
       // HITS
