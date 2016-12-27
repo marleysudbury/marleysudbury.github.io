@@ -15,8 +15,8 @@ function setup(){
 function draw(){
   background(0);
   if (asteroids.length < 5) {
-    newPos = createVector(0, 0)
-    newR = random(15,50)
+    newR = random(30, 100)
+    newPos = createVector(0 - newR, 0 - newR)
     asteroids.push(new Asteroid(newPos, newR));
   }
   for (var i = 0; i < asteroids.length; i++) {

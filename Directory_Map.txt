@@ -1,0 +1,24 @@
+Web directory map:
+marleysudbury.github.io
+  blog
+    04-06-16-arinazil
+    25-06-16-eu-referendum
+  gallery
+    img
+  hatraps
+  javascript
+    asteroids
+    circle
+    firework
+    fractal
+    mandlebrot
+    maze
+    pyllotaxis
+    snek
+    space
+  material
+    images
+  photography
+  python
+  updates
+  wineorcheese
