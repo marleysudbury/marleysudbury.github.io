@@ -8,6 +8,10 @@ body {
 	font-family:Georgia;
 }
 
+h1 {
+	margin: 0px;
+}
+
 #header {
 	background-color:#FFFFFF;
 	padding: 10px;
@@ -39,5 +43,3 @@ a:hover {
 .hiddentxt:hover ~ .hiddenimg{
 	display:block;
 }
-
-.regtext
