@@ -24,6 +24,14 @@ a:hover {
 	color: red;
 }
 
+h1:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -130px; 
+  height: 130px;
+  visibility: hidden; 
+}
+
 #navigate{
 	width: 200px;
 	float: left;
