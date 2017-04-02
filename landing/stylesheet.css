@@ -24,12 +24,12 @@ a:hover {
 	color: red;
 }
 
-h1:before { 
-  display: block; 
-  content: " "; 
-  margin-top: -130px; 
-  height: 130px;
-  visibility: hidden; 
+.title:before {
+  display: block;
+  content: " ";
+  margin-top: -126px;
+  height: 110px;
+  visibility: hidden;
 }
 
 #navigate{
