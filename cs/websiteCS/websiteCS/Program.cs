@@ -4,15 +4,16 @@ namespace websiteCS
 {
 	class MainClass
 	{
-		public static void Main(string[] args)
+		public static void Main()
 		{
-			Console.WriteLine("ADD TWO NUMBERS TOGETHER");
-			Console.Write("Enter the first number: ");
-			int num1 = int.Parse(Console.ReadLine());
-			Console.Write("Enter the second number: ");
-			int num2 = int.Parse(Console.ReadLine());
-			int sum = num1 + num2;
-			Console.WriteLine("The sum is " + sum);
+			Console.Write("Enter your name: ");
+			string input = Console.ReadLine();
+			string firstInitial = (input.ToUpper()).Substring(0, 1);
+			int spaceLocation = input.IndexOf(" ") + 1;
+			int inputLength = input.Length;
+			string lastName = (input.ToUpper()).Substring(spaceLocation, inputLength - spaceLocation);
+			Console.WriteLine(firstInitial + " " + lastName);
+			Console.ReadLine();
 		}
 	}
 }
