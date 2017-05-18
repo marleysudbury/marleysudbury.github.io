@@ -2,8 +2,8 @@ function Missile(speed, x, y) {
   this.width = 5;
   this.height = 5;
   // if (x && y) {
-    this.x = x //+ this.width/2;
-    this.y = y //+ this.height;
+		this.x = x //+ this.width/2;
+		this.y = y //+ this.height;
   // } else {
   //   this.x = ship.x + (ship.width/2 - this.width/2);
   //   this.y = ship.y;

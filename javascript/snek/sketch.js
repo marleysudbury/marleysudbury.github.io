@@ -1,12 +1,13 @@
 //SNAKE BY Marley
 var s;
-var scl = 60;
+var scl = 10;
 var food;
 
 function setup() {
   createCanvas(600, 600);
+  noStroke();
   s = new Snake();
-  frameRate(10);
+  frameRate(20);
   pickLocation();
 }
 

@@ -5,7 +5,7 @@ var shield1 = [];
 var shield2 = [];
 var shield3 = [];
 var invXspeed = 2;
-var invYspeed = 0.1;
+var invYspeed = 0.4;
 var cols = 5;
 var rows = 3;
 var switchx = false;
@@ -82,6 +82,17 @@ function draw() {
         invaders[i].fire();
       }
     }
+    if (invaders[i].y + invaders[i].height > 500) {
+      for (var j = shield1.length - 1; j >= 0; j--) {
+        shield1.splice(j,1);
+      }
+      for (var j = shield2.length - 1; j >= 0; j--) {
+        shield2.splice(j,1);
+      }
+      for (var j = shield3.length - 1; j >= 0; j--) {
+        shield3.splice(j,1);
+      }
+    }
     if (invaders[i].y + invaders[i].height > ship.y) {
       lose = true;
     }
@@ -99,6 +110,24 @@ function draw() {
       remMissile = true;
       lose = true;
     }
+    for (var j = shield1.length - 1; j >= 0; j--) {
+			if (shield1[j].x + shield1[j].width >= invMissiles[i].x && shield1[j].x <= invMissiles[i].x + invMissiles[i].width && invMissiles[i].y + invMissiles[i].height >= shield1[j].y && invMissiles[i].y <= shield1[j].y + shield1[j].height) {
+				shield1.splice(j,1);
+				remMissile = true;
+			}
+		}
+		for (var j = shield2.length - 1; j >= 0; j--) {
+			if (shield2[j].x + shield2[j].width >= invMissiles[i].x && shield2[j].x <= invMissiles[i].x + invMissiles[i].width && invMissiles[i].y + invMissiles[i].height >= shield2[j].y && invMissiles[i].y <= shield2[j].y + shield2[j].height) {
+				shield2.splice(j,1);
+				remMissile = true;
+			}
+		}
+		for (var j = shield3.length - 1; j >= 0; j--) {
+			if (shield3[j].x + shield3[j].width >= invMissiles[i].x && shield3[j].x <= invMissiles[i].x + invMissiles[i].width && invMissiles[i].y + invMissiles[i].height >= shield3[j].y && invMissiles[i].y <= shield3[j].y + shield3[j].height) {
+				shield3.splice(j,1);
+				remMissile = true;
+			}
+		}
     if (remMissile) {
       invMissiles.splice(i, 1);
       remMissile = false;
@@ -117,9 +146,27 @@ function draw() {
         score.inc();
         remMissile = true;
         invaders.splice(j, 1);
-        invYspeed += 0.1;
+        // invYspeed += 0.01;
       }
     }
+		for (var j = shield1.length - 1; j >= 0; j--) {
+			if (shield1[j].x + shield1[j].width >= missiles[i].x && shield1[j].x <= missiles[i].x + missiles[i].width && missiles[i].y + missiles[i].height >= shield1[j].y && missiles[i].y <= shield1[j].y + shield1[j].height) {
+				shield1.splice(j,1);
+				remMissile = true;
+			}
+		}
+		for (var j = shield2.length - 1; j >= 0; j--) {
+			if (shield2[j].x + shield2[j].width >= missiles[i].x && shield2[j].x <= missiles[i].x + missiles[i].width && missiles[i].y + missiles[i].height >= shield2[j].y && missiles[i].y <= shield2[j].y + shield2[j].height) {
+				shield2.splice(j,1);
+				remMissile = true;
+			}
+		}
+		for (var j = shield3.length - 1; j >= 0; j--) {
+			if (shield3[j].x + shield3[j].width >= missiles[i].x && shield3[j].x <= missiles[i].x + missiles[i].width && missiles[i].y + missiles[i].height >= shield3[j].y && missiles[i].y <= shield3[j].y + shield3[j].height) {
+				shield3.splice(j,1);
+				remMissile = true;
+			}
+		}
     if (remMissile) {
       missiles.splice(i, 1);
       remMissile = false;
@@ -146,20 +193,6 @@ function draw() {
     text("YOU WIN!", width/5, width/5);
     text("Thanks for playing!", width/5, width/5+20);
     text("Refresh page to replay", width/5, width/5+40);
-  }
-}
-
-function Shield(x, y) {
-  this.width = 10;
-  this.height = 10;
-  this.durability = 3;
-
-  this.degrade = function() {
-    this.durability--;
-  }
-
-  this.show = function() {
-    rect(x, y, this.width, this.height)
   }
 }
 
