@@ -1,8 +1,0 @@
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/c#/websiteCS/websiteCS/bin/Debug/websiteCS.exe
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/c#/websiteCS/websiteCS/bin/Debug/websiteCS.exe.mdb
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/c#/websiteCS/websiteCS/obj/x86/Debug/websiteCS.exe
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/c#/websiteCS/websiteCS/obj/x86/Debug/websiteCS.exe.mdb
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/cs/websiteCS/websiteCS/bin/Debug/websiteCS.exe
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/cs/websiteCS/websiteCS/bin/Debug/websiteCS.exe.mdb
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/cs/websiteCS/websiteCS/obj/x86/Debug/websiteCS.exe
-/Users/marleysudbury/Desktop/Desktop/projects/marleysudbury.github.io/cs/websiteCS/websiteCS/obj/x86/Debug/websiteCS.exe.mdb
