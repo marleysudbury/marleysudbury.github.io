@@ -1,13 +1,13 @@
 //SNAKE BY Marley
 var s;
-var scl = 10;
+var scl = 30;
 var food;
 
 function setup() {
   createCanvas(600, 600);
   noStroke();
   s = new Snake();
-  frameRate(20);
+  frameRate(10);
   pickLocation();
 }
 
@@ -32,14 +32,18 @@ function draw() {
   rect(food.x, food.y, scl, scl);
 }
 
+function mousePressed() {
+  s.total++;
+}
+
 function keyPressed() {
-  if (keyCode === UP_ARROW) {
+  if (keyCode === UP_ARROW && s.yspeed != 1) {
     s.dir(0, -1);
-  } else if (keyCode === DOWN_ARROW) {
+  } else if (keyCode === DOWN_ARROW && s.yspeed != -1) {
     s.dir(0, 1);
-  } else if (keyCode === LEFT_ARROW) {
+  } else if (keyCode === LEFT_ARROW && s.xspeed != 1) {
     s.dir(-1, 0);
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (keyCode === RIGHT_ARROW && s.xspeed != -1) {
     s.dir(1, 0);
   }
 }
