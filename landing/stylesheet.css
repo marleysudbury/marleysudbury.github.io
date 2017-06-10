@@ -25,11 +25,11 @@ a:hover {
 }
 
 .title:before {
-  display: block;
-  content: " ";
-  margin-top: -126px;
-  height: 110px;
-  visibility: hidden;
+	display: block;
+	content: " ";
+	margin-top: -126px;
+	height: 110px;
+	visibility: hidden;
 }
 
 #navigate{
@@ -46,4 +46,11 @@ a:hover {
 	padding-left: 210px;
 	/*float: right;*/
 	margin-top: 130px;
+	width: 55%;
+}
+
+pre {
+	color: black;
+	background-color: white;
+	padding: 5px;
 }
