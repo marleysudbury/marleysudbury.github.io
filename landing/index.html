@@ -27,6 +27,11 @@
 		<div id = "main">
 		  <!-- &nbsp; -->
 			<div id = "welcome">
+				<p>
+					Q: What the fuck is going on with the cursor?<br>
+					A: I DUNNO MATE!
+				</p>
+			
 				<h1>Welcome to my website!</h1>
 				<p>
 					My name is Marley Sudbury, and this is <a href = "https://www.msudbury.uk">www.msudbury.uk</a> (aka <a href = "https://marleysudbury.github.io">marleysudbury.github.io</a>), my website. To contact me, email: <a href="mailto:mail@msudbury.uk">mail@msudbury.uk</a>.
@@ -48,7 +53,11 @@
 				<p>
 					Important things to explain: Python is an interprative 
 					programming language, a sorting algorithm is an algorithm
-					which sorts elements in a list or array.
+					which sorts elements in a list or array. I'm using python
+					because it is a pretty good language for these sorts of
+					things, in my opinion. I'm sure that you'll be able to
+					implement these and other sorting algorithms in whatever
+					language you want, so go do that.
 				</p>
 				
 				<h3>Bubble Sort</h3>
@@ -154,8 +163,8 @@ function insSort(alist):
 			cnt--;
 	return alist;
 </pre>
-						Already two lines shorter than the bubble sort! Actual
-						python script:
+					Already two lines shorter than the bubble sort! Actual
+					python script:
 <pre>
 def insSort(alist):
 	for i in range(1, len(alist)):
@@ -167,9 +176,9 @@ def insSort(alist):
 			cnt -= 1
 	return alist
 </pre>
-						Again, remarkably similar to the pseudocode. Similar to
-						last time, it is quite difficult to visualise the
-						sorting process which is actually going on here, but:
+					Again, remarkably similar to the pseudocode. Similar to
+					last time, it is quite difficult to visualise the
+					sorting process which is actually going on here, but:
 <pre>
 def insSort(alist):
 	print(alist)
@@ -183,8 +192,8 @@ def insSort(alist):
 		print(alist)
 	return alist
 </pre>
-						Two more lines is enough to give us a nice idea of what
-						is happening. Example output:
+					Two more lines is enough to give us a nice idea of what
+					is happening. Example output:
 <pre>
 [5, 3, 4, 2, 1]
 [3, 5, 4, 2, 1]
@@ -192,20 +201,29 @@ def insSort(alist):
 [2, 3, 4, 5, 1]
 [1, 2, 3, 4, 5]
 </pre>
-						BTW, that is half as many steps as the bubble sort, for
-						the same data set. There are many other sorting
-						algorithms, but I don't know how to implement them off
-						the top of my head. (<-- A stack(LIFO) reference)
-					</p>
+					BTW, that is half as many steps as the bubble sort, for
+					the same data set. There are many other sorting
+					algorithms, but I don't know how to implement them off
+					the top of my head. (<-- A stack(LIFO) reference)
+				</p>
 					
-					<p>
-						P.S. I made a codepen for this. Yes, I know that codepen
-						is for front-end web development, but I don't think
-						there are any rules against this sort of thing. Anyway,
-						link: <a href =
-						"https://codepen.io/marleysudbury/pen/OgVyyO">
-						https://codepen.io/marleysudbury/pen/OgVyyO</a>.
-					</p>
+				<p>
+					P.S. I made a codepen for this. Yes, I know that codepen
+					is for front-end web development, but I don't think
+					there are any rules against this sort of thing. Anyway:
+					<a href =
+					"https://codepen.io/marleysudbury/pen/OgVyyO">
+					link</a>. Also, if you want the programs in python, but
+					can't be bothered to copy and paste it download these:
+					<a href = "python/bubSort.py">bubSort.py</a> & <a href
+					= "python/insSort.py">insSort.py</a>. As I mentioned, if
+					you are programming-savvy, as I suspect you are if you
+					are still reading, have a go at implementing some other
+					sorting algorithms. Check <a href =
+					"https://en.wikipedia.org/wiki/Sorting_algorithm#Popular
+					_sorting_algorithms">here</a> if you need some
+					inspiration.
+				</p>
 			
 			</div>
 				

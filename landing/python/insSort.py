@@ -1,3 +1,6 @@
+#python script by M Sudbury
+#does the insSorts
+
 def insSort(alist):
 	print(alist)
 	for i in range(1, len(alist)):
