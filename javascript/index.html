@@ -1,111 +1,113 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Javascript - Marley Sudbury</title>
-<link rel="stylesheet" type="text/css" href="../stylesheet.css">
-<link rel="shortcut icon"
-      type="image/png"
-      href="../apple-touch-icon.png">
-<style>
-body{
-	background-color:#99e6ff;
-}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Javascript - Marley Sudbury</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+		<link rel="shortcut icon" type="image/png" href="../apple-touch-icon.png">
+		<style>
+			body{
+				background-color:#99e6ff;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
 
-<body>
-<div id="header">
-<!-- <font size="+3"><b>Marley Sudbury</b></font><br /> -->
-<h1>Marley Sudbury</h1>
-javascript
-</div>
-<!-- <p>
-  Here are some of the things I have made in javascript. Many of these have been inspired by the <a href = "https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH">Coding Challenges of Daniel Shiffman</a>.
-  <ul>
-    <li><a href = "asteroids">Asteroids</a></li>
-    <li><a href = "firework">Fireworks</a></li>
-    <li><a href = "fractal">Fractal</a></li>
-    <li><a href = "maze">Maze</a></li>
-    <li><a href = "phyllotaxis">Phyllotaxis</a></li>
-    <li><a href = "snek">Snake</a></li>
-  </ul>
-</p>
-<p>
-Thanks to <a href="http://www.w3schools.com">w3schools.com</a> for teaching me to use javascript, and the users of <a href="http://www.stackoverflow.com">stackoverflow.com</a> for having answers for basically any question :)
-</p> -->
-<p>
-<font size="+3"><b>Babbies First JavaScript</b></font>
-</p>
-<p>
-<script>
-var Null = "";
-</script>
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Null">
-Click me to hide Date and Time.</button>
-<p id="demo"></p>
-<p>
-What's the point in this? Some people want to know the date and time, some don't, and some are inbetween.
-</p>
-<p>
-<button onclick="myFunction()">WARNING: Popup</button>
+	<body>
+		<div id="header">
+			<!-- <font size="+3"><b>Marley Sudbury</b></font><br /> -->
+			<h1>Marley Sudbury</h1>
+			javascript
+		</div>
+		<!-- <p>
+			Here are some of the things I have made in javascript. Many of these have been inspired by the <a href = "https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH">Coding Challenges of Daniel Shiffman</a>.
+			<ul>
+				<li><a href = "asteroids">Asteroids</a></li>
+				<li><a href = "firework">Fireworks</a></li>
+				<li><a href = "fractal">Fractal</a></li>
+				<li><a href = "maze">Maze</a></li>
+				<li><a href = "phyllotaxis">Phyllotaxis</a></li>
+				<li><a href = "snek">Snake</a></li>
+			</ul>
+		</p>
+		<p>
+			Thanks to <a href="http://www.w3schools.com">w3schools.com</a> for teaching me to use javascript, and the users of <a href="http://www.stackoverflow.com">stackoverflow.com</a> for having answers for basically any question :)
+		</p> -->
+		<p>
+			<font size="+3"><b>Babbies First JavaScript</b></font>
+		</p>
+		<p>
+			<script>
+				var Null = "";
+			</script>
+			<button
+				type="button"
+				onclick="document.getElementById('demo').innerHTML = Date()">
+				Click me to display Date and Time.
+			</button>
+			<button
+				type="button"
+				onclick="document.getElementById('demo').innerHTML = Null">
+				Click me to hide Date and Time.
+			</button>
+		</p>
+		<p id="demo"></p>
+		<p>
+			What's the point in this? Some people want to know the date and time, some don't, and some are inbetween.
+		</p>
+		<p>
+			<button onclick="myFunction()">WARNING: Popup</button>
 
-<script>
-function myFunction() {
-    alert("I told you so.");
-}
-</script>
-</p>
-<p>
-<button onclick="toggleFunction()">Toggle button</button>
-<script>
-function toggleFunction(){
-
-    $(".toggleText").toggle();
-};
-</script>
-<span class="toggleText">Hello</span> - Featuring jQuery.
-</p>
-<p>
-Potential uses for these technological <span class="hiddentxt"><a href="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif">leaps and bounds</a></span> are practically unlimited. I can assure your I shall not make use of the full potential.
-<span class="hiddenimg"><img src="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif" width="250" /></span>
-</p>
-<p>
-Videos
-</p>
-<p>
-<script>
-function vidPlay() {
-    video1.play();
-}
-function vidPause() {
-	video1.pause();
-}
-function playPause() {
-    if (video1.paused)
-        video1.play();
-    else
-        video1.pause();
-}
-</script>
-<video id="video1" width="810" loop>
-<source src="lottery.mp4" />
-</video><br />
-<button onclick="playPause()">Play/Pause</button>
-<span onmouseover="vidPlay()" onmouseout="vidPause()">PLAY/PAUSE</span>
-</p>
-<p>
-This can also be used in conjunction with images, see my <a href="http://codepen.io/marleysudbury/pen/bedYVq">codepen.io</a>.
-</p>
-<!--<iframe height='712' scrolling='no' src='http://codepen.io/marleysudbury/embed/bedYVq/?height=712&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/marleysudbury/pen/bedYVq/'>CSS Text:hover show image</a> by Marley Sudbury (<a href='http://codepen.io/marleysudbury'>@marleysudbury</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>-->
-<p>
-Click <a href="../">here</a> to return to the home page.
-</p>
-</body>
+			<script>
+				function myFunction() {
+				alert("I told you so.");
+				}
+			</script>
+		</p>
+		<p>
+			<button onclick="toggleFunction()">Toggle button</button>
+			<script>
+				function toggleFunction(){
+					$(".toggleText").toggle();
+				};
+			</script>
+			<span class="toggleText">Hello</span> - Featuring jQuery.
+		</p>
+		<!-- <p>
+			Potential uses for these technological <span class="hiddentxt"><a href="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif">leaps and bounds</a></span> are practically unlimited. I can assure your I shall not make use of the full potential.
+			<span class="hiddenimg"><img src="../rorita_jumping_animation_by_rorita_sakura-d50q0lh.gif" width="250" /></span>
+		</p> -->
+		<p>
+			Videos
+		</p>
+		<p>
+			<script>
+				function vidPlay() {
+					video1.play();
+				}
+				function vidPause() {
+					video1.pause();
+				}
+				function playPause() {
+					if (video1.paused)
+						video1.play();
+					else
+						video1.pause();
+				}
+			</script>
+			<video id="video1" width="810" loop>
+				<source src="lottery.mp4" />
+			</video><br />
+			<button onclick="playPause()">Play/Pause</button>
+			<span onmouseover="vidPlay()" onmouseout="vidPause()">PLAY/PAUSE</span>
+		</p>
+		<p>
+			This can also be used in conjunction with images, see my <a href="http://codepen.io/marleysudbury/pen/bedYVq">codepen.io</a>.
+		</p>
+		<!--<iframe height='712' scrolling='no' src='http://codepen.io/marleysudbury/embed/bedYVq/?height=712&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/marleysudbury/pen/bedYVq/'>CSS Text:hover show image</a> by Marley Sudbury (<a href='http://codepen.io/marleysudbury'>@marleysudbury</a>) on <a href='http://codepen.io'>CodePen</a>.
+		</iframe>-->
+		<p>
+			Click <a href="../">here</a> to return to the home page.
+		</p>
+	</body>
 </html>
