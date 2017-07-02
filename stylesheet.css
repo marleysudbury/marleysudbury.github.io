@@ -6,7 +6,11 @@ body {
 	padding: 10px;
 	border: double;
 	font-family:Georgia;
-	padding-bottom: 0px;
+	/*padding-bottom: 0px;*/
+}
+
+p {
+	margin-bottom: 0px;
 }
 
 h1 {
