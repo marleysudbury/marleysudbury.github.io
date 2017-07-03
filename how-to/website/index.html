@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
+		<title>How to make a website - Marley Sudbury</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type = "text/javascript"></script>
+		<link rel = "stylesheet" type = "text/css" href = "../../stylesheet.css">
+		<link rel = "shortcut icon" type = "image/png" href = "../../apple-touch-icon.png">
 
-    <title>How to make a website - Marley Sudbury</title>
+		<style>
+		body {
+			background-color: #99ff99;
+		}
+		</style>
 
-    <link rel = "stylesheet" type = "text/css" href = "../../stylesheet.css">
-    <link rel = "shortcut icon" type = "image/png" href = "../../apple-touch-icon.png">
+	</head>
 
-    <style>
-    body {
-      background-color: #99ff99;
-    }
-    </style>
+	<body>
+		<div id = "header">
+			<h1>Marley Sudbury</h1>
+			How To Make a Website
+		</div>
 
-  </head>
+		<p>
+			So, you want to make a website? Here's what you need to consider:
+		</p>
+		
+		<ul>
+			<li><a href='#content'>Content</a> - The content of your website</li>
+			<li><a href='#hosting'>Hosting</a> - Where your website is hosted</li>
+			<li><a href='#structure'>Structure</a> - The file/folder structure of your website</li>
+			<li><a href='#styling'>Styling</a> - The styles of your website</li>
+		</ul>
 
-  <body>
+		<h3 id='content'>Content</h3>
+		<p>
+			This is, obviously, the most important thing to consider when making a website. Usually. I suppose you could just be making one as a technical experiment, in which case I guess "Lorem ipsum dolor sit amet" will do.
+		</p>
 
-    <!-- <div style="background-color:white; font-family:monospace;">
-      Archive notice: This section was archived because it had become to bloated, not due to the dated style ;)
-    </div> -->
+		<h3 id='hosting'>Hosting</h3>
+	
+		<p>
+			For people to access your website it must be hosted on a web-server. This server delivers the pages of your site to the people accessing it, and in some cases may also do some server-side-processing, depending on the site and the server involved.
+		</p>
+	
+		<p>
+			I personally use <a href="https://pages.github.com">GitHub Pages</a> to host this website, because it doesn't need any server-side-processing, which GitHub Pages doesn't provide. It also allows you to use a "projectname.github.io" domain name or your own top level one. There are many different hosting options available, at different costs and offering different things, and it is definitly worth looking around to find the right option for you. Also, if you are going to use your own domain, take your time to check all the different name registrars to find the best price, as they often change.
+		</p>
 
-    <div id = "header">
-      <!-- <font size = "+3"><b>Marley Sudbury</b></font><br> -->
-      <h1>Marley Sudbury</h1>
-      how to make a website
-    </div>
+		<h3 id='structure'>Structure</h3>
+	
+		<p>
+			The file/folder structure of your website is very important. The root folder is the one that is accessed at your domain name, e.g. www.msudbury.uk provides the highest folder level, and there is no way to access the files outside this folder, but then there is www.msudbury.uk/gallery, which is a folder within the root. Most web servers will send the user an 'index' file when accessing a folder, so when you go to www.msudbury.uk, you are being shown www.msudbury.uk/index.html.
+		</p>
+	
+		<p>
+			It is a good idea when planning a website to draw out a '<a href='example-site-map.png'>site-map</a>'. This can be done on a piece of paper, or within a computer program, and it allows you to see how different files can be accessed. When I make a website, I ususally give each page its own directory. One reason for this is that it allows you to give each one files of the same name, e.g. each page could have it's own stylesheet.css file, whereas if all pages were in the same directory those files would have to have different names.
+		</p>
 
-    <p>
-      So, you want to make a website? Here's what you need to consider:
-      <ul>
-        <li><a href='#content'>Content</a> - The content of your website</li>
-        <li><a href='#hosting'>Hosting</a> - Where your website is hosted</li>
-        <li><a href='#structure'>Structure</a> - The file/folder structure of your website</li>
-        <li><a href='#styling'>Styling</a> - The styles of your website</li>
-      </ul>
-    </p>
-
-    <h3 id='content'>Content</h3>
-    <p>
-      This is, obviously, the most important thing to consider when making a website. Usually. I suppose you could just be making one as a technical experiment, in which case I guess "Lorem ipsum dolor sit amet" will do.
-    </p>
-
-    <h3 id='hosting'>Hosting</h3>
-    <p>
-      For people to access your website it must be hosted on a web-server. This server delivers the pages of your site to the people accessing it, and in some cases may also do some server-side-processing, depending on the site and the server involved.
-    </p>
-    <p>
-      I personally use <a href="https://pages.github.com">GitHub Pages</a> to host this website, because it doesn't need any server-side-processing, which GitHub Pages doesn't provide. It also allows you to use a "projectname.github.io" domain name or your own top level one. There are many different hosting options available, at different costs and offering different things, and it is definitly worth looking around to find the right option for you. Also, if you are going to use your own domain, take your time to check all the different name registrars to find the best price, as they often change.
-    </p>
-
-    <h3 id='structure'>Structure</h3>
-    <p>
-      The file/folder structure of your website is very important. The root folder is the one that is accessed at your domain name, e.g. www.msudbury.uk provides the highest folder level, and there is no way to access the files outside this folder, but then there is www.msudbury.uk/gallery, which is a folder within the root. Most web servers will send the user an 'index' file when accessing a folder, so when you go to www.msudbury.uk, you are being shown www.msudbury.uk/index.html.
-    </p>
-    <p>
-      It is a good idea when planning a website to draw out a '<a href='example-site-map.png'>site-map</a>'. This can be done on a piece of paper, or within a computer program, and it allows you to see how different files can be accessed. When I make a website, I ususally give each page its own directory. One reason for this is that it allows you to give each one files of the same name, e.g. each page could have it's own stylesheet.css file, whereas if all pages were in the same directory those files would have to have different names.
-    </p>
-
-    <h3 id='styling'>Styling</h3>
-    <p>
-      The styling of your website is also very important, as this has a large impact on how your content is percieved. Your styling consists of rules, e.g. 'background-color: #99ff99', which are applied to elements, e.g. 'body'. There are many more complex things which can be achieved with CSS, and using an external stylesheet (a .css file), as I do on this site, allows the same rules to be applied to multiple pages on the same site.
-    </p>
-  </body>
+		<h3 id='styling'>Styling</h3>
+	
+		<p>
+			The styling of your website is also very important, as this has a large impact on how your content is percieved. Your styling consists of rules, e.g. 'background-color: #99ff99', which are applied to elements, e.g. 'body'. There are many more complex things which can be achieved with CSS, and using an external stylesheet (a .css file), as I do on this site, allows the same rules to be applied to multiple pages on the same site.
+		</p>
+	</body>
 </html>
