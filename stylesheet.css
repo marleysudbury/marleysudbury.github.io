@@ -27,24 +27,3 @@ h1 {
 a:hover {
 	color:#F00;
 }
-
-#hiddenimage{
-}
-
-.hiddenimg{
-	display:none;
-}
-
-.hiddentxt{
-	font-weight:bold;
-	color:#F00;
-}
-
-.hiddentxt a{
-	color:#F00;
-	text-decoration:none;
-}
-
-.hiddentxt:hover ~ .hiddenimg{
-	display:block;
-}
