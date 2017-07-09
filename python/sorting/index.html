@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Python/Sorting - Marley Sudbury</title>
+		<title>Sorting Algorithms in Python - Marley Sudbury</title>
 		<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
 		<link rel="shortcut icon" type="image/png" href="../../apple-touch-icon.png">
 		<style>
@@ -20,11 +20,11 @@
 	<body>
 		<div id="header">
 			<h1>Marley Sudbury</h1>
-			<a href="../">Python</a> / "Sorting algorithms in Python"
+			<a href="../">Python</a> / <em>Sorting Algorithms in Python</em>
 		</div>
 
 		<p>
-			Important things to explain: Python is an interprative
+			Important things to explsain: Python is an interprative
 			programming language, a sorting algorithm is an algorithm
 			which sorts elements in a list or array. I'm using python
 			because it is a pretty good language for these sorts of
@@ -137,7 +137,7 @@ def bubSort(alist):
 function insSort(alist):
 	for (i = 1 to len(alist)):
 		cnt = i;
-		while (alist[cnt] < alist[cnt - 1]):
+		while (alist[cnt] &lt; alist[cnt - 1]):
 			temp = alist[cnt];
 			alist[cnt] = alist[cnt - 1];
 			alist[cnt - 1] = temp;
@@ -152,7 +152,7 @@ function insSort(alist):
 def insSort(alist):
 	for i in range(1, len(alist)):
 		cnt = i
-		while (alist[cnt] < alist[cnt - 1] and cnt > 0):
+		while (alist[cnt] &lt; alist[cnt - 1] and cnt > 0):
 			temp = alist[cnt]
 			alist[cnt] = alist[cnt - 1]
 			alist[cnt - 1] = temp
@@ -169,7 +169,7 @@ def insSort(alist):
 	print(alist)
 	for i in range(1, len(alist)):
 		cnt = i
-		while (alist[cnt] < alist[cnt - 1] and cnt > 0):
+		while (alist[cnt] &lt; alist[cnt - 1] and cnt > 0):
 			temp = alist[cnt]
 			alist[cnt] = alist[cnt - 1]
 			alist[cnt - 1] = temp
@@ -192,7 +192,7 @@ def insSort(alist):
 			BTW, that is half as many steps as the bubble sort, for
 			the same data set. There are many other sorting
 			algorithms, but I don't know how to implement them off
-			the top of my head. (<-- A stack(LIFO) reference)
+			the top of my head. (&lt;-- A stack(LIFO) reference)
 		</p>
 
 		<p>
@@ -203,7 +203,7 @@ def insSort(alist):
 			"https://codepen.io/marleysudbury/pen/OgVyyO">
 			link</a>. Also, if you want the programs in python, but
 			can't be bothered to copy and paste it download these:
-			<a href = "bubSort.py">bubSort.py</a> & <a href
+			<a href = "bubSort.py">bubSort.py</a> &amp; <a href
 			= "insSort.py">insSort.py</a>. As I mentioned, if
 			you are programming-savvy, as I suspect you are if you
 			are still reading, have a go at implementing some other
