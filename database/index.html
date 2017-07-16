@@ -3,8 +3,12 @@
 	<head>
 		<title>Marley on Databases</title>
 		<style>
+			body {
+				margin-left: 5%;
+				margin-right: 5%;
+			}
 			p {
-				margin-right:10%;
+				text-align: justify;
 			}
 		</style>
 	</head>
@@ -13,43 +17,69 @@
 		<h1>A Page About Databases</h1>
 		<em>by Marley Sudbury</em>
 		
-		<p>Click <a href="Tires.accdb">here</a> to download the file I made for this, 'Tires.accdb'.
+		<p>
+			Click <a href="Tires.accdb">here</a> to download the file I made for this, 'Tires.accdb'.
+		</p>
 		
-		<p>Maholla, my name is Marley Sudbury. This is a page I have written about databases. Becuase, say it with me now, I have no life.</p>
+		<p>
+			Maholla, my name is Marley Sudbury. This is a page I have written about databases. Becuase, say it with me now, I have no life.
+		</p>
 		
 		<h3>Entity Relationship Diagram</h3>
-		<p>An entity relationship diagram (ERD) is a fundamental part of planning a relational database. This shows the various tables of the database and how they relate to each other. There are two types of relationship in a normalised relational database, one-to-one and one-to-many. Here is an example.</p>
+		<p>
+			An entity relationship diagram (ERD) is a fundamental part of planning a relational database. This shows the various tables of the database and how they relate to each other. There are two types of relationship in a normalised relational database, one-to-one and one-to-many. Here is an example.
+		</p>
 		
-		<p>Scenario: A man (say, Pedro) runs a company which puts tires on cars. He orders tires from suppliers, and has a list of customers and cars. Draw an entity relationship diagram (ERD) of a computer based system he could use (disclaimer: I know nothing about how car tires work).</p>
+		<p>
+			Scenario: A man (say, Pedro) runs a company which puts tires on cars. He orders tires from suppliers, and has a list of customers and cars. Draw an entity relationship diagram (ERD) of a computer based system he could use (disclaimer: I know nothing about how car tires work).
+		</p>
 		
 		<img src="ERDeg.png" title="ERD Example.">
 		
-		<p>This shows quite clearly the relationship between the various fields in the tables. As you can see, each table has its own 'ID' field, which would be a primary key field (for those who don't know, a primary key is used to uniquely identify each record in a table). The ends of the line with 'crows feet' are the many end of the relationship, whilst the other ends have a '1' put through them. Also, note that the table names are singular, as this is an industry standard.</p>
+		<p>
+			This shows quite clearly the relationship between the various fields in the tables. As you can see, each table has its own 'ID' field, which would be a primary key field (for those who don't know, a primary key is used to uniquely identify each record in a table). The ends of the line with 'crows feet' are the many end of the relationship, whilst the other ends have a '1' put through them. Also, note that the table names are singular, as this is an industry standard.
+		</p>
 		
-		<p>Although most industry use of databases is done with network technology, such as SQL, for local solutions I find that Microsoft's <em>Access</em> is perfectly acceptable, as it is fully-featured, and hassle-free to set up. It is also free with my Office 365 account, provided by my school ;).</p>
+		<p>
+			Although most industry use of databases is done with network technology, such as SQL, for local solutions I find that Microsoft's <em>Access</em> is perfectly acceptable, as it is fully-featured, and hassle-free to set up. It is also free with my Office 365 account, provided by my school ;).
+		</p>
 		
-		<p>If you aren't using <em>Access</em>, just do your own thing, ma dude. First, let's make a database:</p>
+		<p>
+			If you aren't using <em>Access</em>, just do your own thing, ma dude. First, let's make a database:
+		</p>
 		
 		<img src="newdb.PNG" title="Making a new database.">
 		
-		<p>Lovely and empty, just like all databases should be. You won't see anything like this for quite a while now, unless you mess up so bad that you have to start again, which could certainly happen. Now you have to implement your ERD. Make all the tables.</p>
+		<p>
+			Lovely and empty, just like all databases should be. You won't see anything like this for quite a while now, unless you mess up so bad that you have to start again, which could certainly happen. Now you have to implement your ERD. Make all the tables.
+		</p>
 		
 		<img src="tables.PNG" title="List of all tables.">
 		
-		<p>The next step is to set up all the fields for all the tables in design view, something like this:</p>
+		<p>
+			The next step is to set up all the fields for all the tables in design view, something like this:
+		</p>
 		
 		<img src="structure.PNG" title="The structure of the 'Car' table.">
 		
-		<p>Don't forget to set the properties for each field! The next thing to do is to implement the actual relationships between the tables. This is in the 'Relationships' section of the 'Database Tools' tab.</p>
+		<p>
+			Don't forget to set the properties for each field! The next thing to do is to implement the actual relationships between the tables. This is in the 'Relationships' section of the 'Database Tools' tab.
+		</p>
 		
 		<img src="newRel.PNG" title="Window to create relationship between two fields.">
 		
-		<p>And we end up with something like this:</p>
+		<p>
+			And we end up with something like this:
+		</p>
 		
 		<img src="newERD.PNG" title="Diagram of relationships in Access.">
 		
-		<p>Now it is time to populate the database! Once you have done that, time to move on to the really fun stuff (/s), queries, forms and reports! I want to make a form for adding new cars, and one for adding new employees.</p>
+		<p>
+			Now it is time to populate the database! Once you have done that, time to move on to the really fun stuff (/s), queries, forms and reports! I want to make a form for adding new cars, and one for adding new employees.
+		</p>
 		
-		<p>To be honset, this is where my skills with databases run-out. My forms and reports <em>never</em> look good, and they're not going to start to now!
+		<p>
+			To be honest, this is where my skills with databases run-out. My forms and reports <em>never</em> look good, and they're not going to start to now!
+		</p>
 	</body>
 </html>
