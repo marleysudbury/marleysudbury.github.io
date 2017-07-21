@@ -1,5 +1,4 @@
-#python script by M Sudbury
-#does the bubSorts
+# Bubble Sort by M Sudbury
 
 def bubSort(alist):
 	print(alist)

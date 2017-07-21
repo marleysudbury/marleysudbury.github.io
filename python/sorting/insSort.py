@@ -1,5 +1,4 @@
-#python script by M Sudbury
-#does the insSorts
+# Insertion Sort by M Sudbury
 
 def insSort(alist):
 	print(alist)

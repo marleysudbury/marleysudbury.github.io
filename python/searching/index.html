@@ -24,194 +24,77 @@
 		</div>
 
 		<p>
-			Important things to explsain: Python is an interprative
-			programming language, a sorting algorithm is an algorithm
-			which sorts elements in a list or array. I'm using python
-			because it is a pretty good language for these sorts of
-			things, in my opinion. I'm sure that you'll be able to
-			implement these and other sorting algorithms in whatever
-			language you want, so go do that.
+			I'll assume that you are reading this after reading <a href="../sorting"><em>Sorting Algorithms in Python</em></a>, as this will require that knowledge later on.
 		</p>
 
-		<h3>Bubble Sort</h3>
+		<h3>Linear Search</h3>
 
 		<p>
-			One of the least efficient sorting algorithms, but a good
-			place for begginers, the bubble sort is a sorting algorithm
-			which I believe every good programmer should have memorised.
-			It works by going through the list and comparing each pair,
-			swapping if the one on the left is larger than the one on
-			the right, until there are no more swaps to make.
+			Our first searching algorthm is called the linear searching algorithm. This, as the name would suggest, searches through a data set one at a time from the first to the last, until the correct is found, or the end is reached. The data does not need to be sorted for a linear search.
 		</p>
 
 		<p>
-			The pseudo code for a bubble sort function would be like so:
+			The pseudo code for a linear search function would be like so:
 		</p>
 <pre>
-function bubSort(alist):
-	swapped = true;
-	while (swapped):
-		swapped = false;
-		for (i = 0 to len(alist) - 1):
-			if (alist[i] > alist[i+1]):
-				temp = alist[i];
-				alist[i] = alist[i+1];
-				alist[i+1] = temp;
-				swapped = true;
-	return alist;
+function linSearch(alist, find):
+	found = false;
+	index = 0;
+	while (!found AND index < len(alist)):
+		if (alist[index] == find):
+			found = true;
+		else:
+			index++;
+	if (!found):
+		return -1;
+	else:
+		return index;
 </pre>
 		<p>
-			This can be translated into the following python code:
+			This can be translated into the following Python code:
 		</p>
 <pre>
-def bubSort(alist):
-	swapped = True
-	while (swapped):
-		swapped = False
-		for i in range(0, len(alist) - 1):
-			if (alist[i] > alist[i+1]):
-				temp = alist[i]
-				alist[i] = alist[i+1]
-				alist[i+1] = temp
-				swapped = True
-	return alist
+def linSearch(alist, find):
+	found = False
+	index = 0
+	while (found == False & index < len(alist)):
+		if (alist[index] == find):
+			found = True
+		else:
+			index += 1
+	if (found == False):
+		return -1
+	else:
+		return index
 </pre>
 		<p>
-			Which really isn't that different to the pseudocode, hmm.
-			When this function is given an unordered list, it orders
-			them, just like you would expect, but it isn't very pretty,
-			and it can be difficult to see how it works. Solution?:
-		</p>
-<pre>
-def bubSort(alist):
-	print(alist)
-	swapped = True
-	while (swapped):
-		swapped = False
-		for i in range(0, len(alist) - 1):
-			if (alist[i] > alist[i+1]):
-				temp = alist[i]
-				alist[i] = alist[i+1]
-				alist[i+1] = temp
-				swapped = True
-				print(alist)
-	return alist
-</pre>
-		<p>
-			Yes, there are only two more lines. Example output:
-		</p>
-<pre>
-[5, 3, 4, 2, 1]
-[3, 5, 4, 2, 1]
-[3, 4, 5, 2, 1]
-[3, 4, 2, 5, 1]
-[3, 4, 2, 1, 5]
-[3, 2, 4, 1, 5]
-[3, 2, 1, 4, 5]
-[2, 3, 1, 4, 5]
-[2, 1, 3, 4, 5]
-[1, 2, 3, 4, 5]
-</pre>
-		<p>
-			Much prettier in my opinion, although this is perhaps now
-			more suited to a procedure than a function. Due
-			to the fact that it retains the return instruction, it is
-			still a function.
+			If called as "print(linSearch([1,2,3],2)", it would print "1".
 		</p>
 
-		<h3>Insertion Sort</h3>
+		<h3>Binary Search</h3>
 
 		<p>
-			As mentioned, the bubble sort is a fairly inefficient
-			sorting algorithm. A slightly better one is the insertion
-			sort, which works by comparing the next number in the
-			unsorted list to each one in the sorted list until you find
-			the right location for it. It is a bit like an inside out
-			bubble sort.
+			This algorithm is usually, although not always, more efficient than a linear search, but it should be considered that it requires the data to be sorted. For this reason, you may want to use one of the previously mentioned sorting algorithms in conjunction, if you want to search unsorted data this way.
 		</p>
 
 		<p>
-			The pseudocode for an insertion sort function would be thus:
+			The pseudocode for a binary search would be:
 		</p>
 <pre>
-function insSort(alist):
-	for (i = 1 to len(alist)):
-		cnt = i;
-		while (alist[cnt] &lt; alist[cnt - 1]):
-			temp = alist[cnt];
-			alist[cnt] = alist[cnt - 1];
-			alist[cnt - 1] = temp;
-			cnt--;
-	return alist;
+function binSearch(alist, find):
+	lbound = 0;
+	ubound = len(alist);
+	found = false;
+	while (found == false AND lbound < ubound):
+		midpoint = round((ubound + lbound) / 2);
+		if (alist[midpoint] == find):
+			found = true;
+		else:
+			if (alist[midpoint] > find):
+				ubound = midpoint - 1;
+			else:
+				lbound = midpoint + 1;
 </pre>
-		<p>
-			Already two lines shorter than the bubble sort! Actual
-			python script:
-		</p>
-<pre>
-def insSort(alist):
-	for i in range(1, len(alist)):
-		cnt = i
-		while (alist[cnt] &lt; alist[cnt - 1] and cnt > 0):
-			temp = alist[cnt]
-			alist[cnt] = alist[cnt - 1]
-			alist[cnt - 1] = temp
-			cnt -= 1
-	return alist
-</pre>
-		<p>
-			Again, remarkably similar to the pseudocode. Similar to
-			last time, it is quite difficult to visualise the
-			sorting process which is actually going on here, but:
-		</p>
-<pre>
-def insSort(alist):
-	print(alist)
-	for i in range(1, len(alist)):
-		cnt = i
-		while (alist[cnt] &lt; alist[cnt - 1] and cnt > 0):
-			temp = alist[cnt]
-			alist[cnt] = alist[cnt - 1]
-			alist[cnt - 1] = temp
-			cnt -= 1
-		print(alist)
-	return alist
-</pre>
-		<p>
-			Two more lines is enough to give us a nice idea of what
-			is happening. Example output:
-		</p>
-<pre>
-[5, 3, 4, 2, 1]
-[3, 5, 4, 2, 1]
-[3, 4, 5, 2, 1]
-[2, 3, 4, 5, 1]
-[1, 2, 3, 4, 5]
-</pre>
-		<p>
-			BTW, that is half as many steps as the bubble sort, for
-			the same data set. There are many other sorting
-			algorithms, but I don't know how to implement them off
-			the top of my head. (&lt;-- A stack(LIFO) reference)
-		</p>
-
-		<p>
-			P.S. I made a codepen for this. Yes, I know that codepen
-			is for front-end web development, but I don't think
-			there are any rules against this sort of thing. Anyway:
-			<a href =
-			"https://codepen.io/marleysudbury/pen/OgVyyO">
-			link</a>. Also, if you want the programs in python, but
-			can't be bothered to copy and paste it download these:
-			<a href = "bubSort.py">bubSort.py</a> &amp; <a href
-			= "insSort.py">insSort.py</a>. As I mentioned, if
-			you are programming-savvy, as I suspect you are if you
-			are still reading, have a go at implementing some other
-			sorting algorithms. Check <a href =
-			"https://en.wikipedia.org/wiki/Sorting_algorithm#Popular
-			_sorting_algorithms">here</a> if you need some
-			inspiration.
-		</p>
 
 		<p><a href="../../">Click here to go home.</a></p>
 	</body>
