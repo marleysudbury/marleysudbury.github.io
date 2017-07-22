@@ -24,7 +24,7 @@
 		</div>
 
 		<p>
-			I'll assume that you are reading this after reading <a href="../sorting"><em>Sorting Algorithms in Python</em></a>, as this will require that knowledge later on.
+			I'll assume that you are reading this after reading <a href="../sorting"><em>Sorting Algorithms in Python</em></a>, as this will require that knowledge later on. I wouldn't write any of this stuff in an exam, as I have reduced the efficiency of the algorithms for the sake of understanding.
 		</p>
 
 		<h3>Linear Search</h3>
@@ -68,7 +68,7 @@ def linSearch(alist, find):
 		return index
 </pre>
 		<p>
-			If called as "print(linSearch([1,2,3],2)", it would print "1".
+			If called as "print(linSearch([1,2,3],2))", it would print "1".
 		</p>
 
 		<h3>Binary Search</h3>
@@ -94,8 +94,46 @@ function binSearch(alist, find):
 				ubound = midpoint - 1;
 			else:
 				lbound = midpoint + 1;
+	if (found == false):
+		return -1;
+	else:
+		return midpoint;
 </pre>
-
-		<p><a href="../../">Click here to go home.</a></p>
+		
+		<p>
+			This is the actual Python:
+		</p>
+<pre>
+def binSearch(alist, find):
+	lbound = 0
+	ubound = len(alist)
+	found = False
+	while (found == False and lbound <= ubound):
+		midpoint = int((ubound + lbound) / 2)
+		if (alist[midpoint] == find):
+			found = True
+		else:
+			if (alist[midpoint] > find):
+				ubound = midpoint - 1
+			else:
+				lbound = midpoint + 1
+	if (found == False):
+		return -1
+	else:
+		return midpoint
+</pre>
+		
+		<p>
+			If called as "print(binSearch([1,2,3,4],4))", it would print "3".
+		</p>
+		
+		<p>Links!:</p>
+		<ul>
+			<li><a href="linSearch.py">linSearch.py</a></li>
+			<li><a href="binSearch.py">binSearch.py</a></li>
+			<li><a href="../sorting">Sorting algorithms</a>.</li>
+			<li><a href="../">More Python</a>.</li>
+			<li><a href="../../">Go home</a>.</li>
+		</ul>
 	</body>
 </html>

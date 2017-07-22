@@ -12,5 +12,4 @@ def linSearch(alist, find):
 	else:
 		return index
 
-alist = [1,3,5,7,9,11,13]
-print(linSearch(alist, 9))
+print(linSearch([1,2,3],2))
