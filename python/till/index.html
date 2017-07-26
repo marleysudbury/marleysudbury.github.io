@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Till System in Python - Marley Sudbury</title>
+		<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+		<link rel="icon" type="image/png" href="../../apple-touch-icon.png">
+		<style>
+			body{
+				background-color: #99e6ff;
+			}
+			pre {
+				tab-size: 4;
+				border-style: double;
+				background-color: white;
+				padding: 5px;
+				margin-bottom: 0px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="header">
+			<h1>Marley Sudbury</h1>
+			<a href="../">Python</a> / <em>Till System in Python</em>
+		</div>
+		
+		<p>
+			What is a till system? Well, in short I will be designing here, for you, a piece of Python code that would not look out of place at a supermarket checkout (apart from the fact it's in Python, lol).
+		</p>
+		
+		<p>
+			The first step, as always when designing a piece of software, is to set out our requirements:
+		</p>
+		
+		<ul>
+			<li>Should have two modes (regular and admin).</li>
+			<li>Should be able to create, view and delete items in the admin mode.</li>
+			<li>Items should be stored in a .txt file.</li>
+			<li>Items can be 'scanned' (in this case, manually entering a code).</li>
+			<li>Items should have three parts (code, name and price).</li>
+			<li>All parts of the program should be accessible without having to restart it.</li>
+			<li>Items can be added to the basket.</li>
+			<li>Can calculate change to be given.</li>
+		</ul>
+		
+		<p>
+			Now, when actually implementing this, we have to consider the programming side of things. This program will use lots of functions, such as:
+		</p>
+		
+		<ul>
+			<li>A function for regular use.</li>
+			<li>A function for admin use.</li>
+			<li>A function for scanning / returning item data.</li>
+			<li>A function for adding to the basket.</li>
+			<li>A function for calculating change.</li>
+		</ul>
+		
+		<p>
+			Let's write the bare-bones of this program, so we can figure out where everything should go.
+		</p>
+<pre>
+rPassword = "Jolly"
+aPassword = "Jelly"
+def wrong():
+	print("WRONG!")
+	startup()
+def regOp():
+	pssw = input("Password: ")
+	if (pssw != rPassword):
+		wrong()
+def admOp():
+	pssw = input("Admin Password: ")
+	if (pssw != aPassword):
+		wrong()
+def startup():
+	# Welcome message
+	mode = input("0 (Regular) | 1 (Admin): ")
+	if (mode == 0):
+		regOp()
+	else:
+		admOp()
+
+startup()
+</pre>
+	</body>
+</html>
