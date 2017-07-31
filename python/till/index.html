@@ -56,31 +56,77 @@
 		</ul>
 		
 		<p>
-			Let's write the bare-bones of this program, so we can figure out where everything should go.
+			Now time to walk through the code itself&hellip;
 		</p>
 <pre>
+import getpass
+
 rPassword = "Jolly"
 aPassword = "Jelly"
-def wrong():
-	print("WRONG!")
-	startup()
-def regOp():
-	pssw = input("Password: ")
-	if (pssw != rPassword):
-		wrong()
-def admOp():
-	pssw = input("Admin Password: ")
-	if (pssw != aPassword):
-		wrong()
+sName = "TillOS"
+sVer = "0.69"
+</pre>
+		<p>
+			"getpass" is a python library which we will use to hide our passwords from prying eyes. Those passwords being "Jolly" and "Jelly", displayed in the source code quite plainly.
+		</p>
+<pre>
 def startup():
-	# Welcome message
+	initialise()
+	print("Welcome to {} v{}!".format(sName, sVer))
 	mode = input("0 (Regular) | 1 (Admin): ")
 	if (mode == "0"):
 		regOp()
 	else:
 		admOp()
-
-startup()
 </pre>
+		<p>
+			This is the start-up procedure, called when starting the program. It calls the "initialise" procedure, and then allows the user to choose either regular use or admin use.
+		</p>
+<pre>
+def initialise():
+	file = open("items.txt", "r")
+	global data
+	global basket
+	basket = []
+	data = file.read()
+	file.close()
+	data = data.split("\n")
+	data = [data[i:i+3] for i in range(0, len(data), 3)]
+</pre>
+		<p>
+			This is the initialisation procedure itself. Basically it declares and defines the global data structures which will be used in our program: data, which is a 2-D list of all the items and the basket, where items are added when they are scanned.
+		</p>
+<pre>
+def regOp():
+	pssw = getpass.getpass("Password: ")
+	if (pssw != rPassword):
+		wrong()
+	change = False
+	while (change == False):
+		operation = input("0 (Add) | 1 (Remove) | 2 (View) | 3 (Checkout) | 4 (Table) | 5 (Admin): ")
+		if (operation == "0"):
+			prodID = input("Enter prodID: ")
+			if (isValid(prodID) == True):
+				add(prodID)
+		elif (operation == "1"):
+			if len(basket) > 0:
+				remove()
+			else:
+				print("None to remove!")
+		elif (operation == "2"):
+			view()
+		elif (operation == "3"):
+			checkout()
+		elif (operation == "4"):
+			table()
+		elif (operation == "5"):
+			change = True
+		else:
+			print("Invalid operation!")
+	admOp()
+</pre>
+		<p>
+			Currently, I have only made the regOp mode, so that is all I shall be showing. If the password entered is wrong, the appropriate procedure is called (see below). The variable "change" is used to change to admOp(). The regular user has access to 6 functions: add, remove, view, checkout, table, admin.
+		</p>
 	</body>
 </html>

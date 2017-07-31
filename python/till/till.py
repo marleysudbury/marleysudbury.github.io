@@ -76,9 +76,10 @@ def regOp():
 		elif (operation == "4"):
 			table()
 		elif (operation == "5"):
-			admOp()
+			change = True
 		else:
 			print("Invalid operation!")
+	admOp()
 def admOp():
 	pssw = getpass.getpass("Admin Password: ")
 	if (pssw != aPassword):
