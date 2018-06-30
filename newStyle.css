@@ -2,22 +2,14 @@
 /* CSS Document */
 
 body {
-	background-color:#ffedbd;
+	background-color:#DDD;
+	border: solid;
 	padding: 10px;
-	border: double;
-	font-family: Georgia;
-	/*padding-bottom: 0px;*/
-	/*width: 800px;
-	margin: 0 auto;
-}
-
-html {
-	padding: 10px;*/
+	font-family: Helvetica;
 }
 
 p {
 	margin-bottom: 0px;
-	/*text-align: justify;*/
 }
 
 h1 {
@@ -27,7 +19,7 @@ h1 {
 #header {
 	background-color:#FFFFFF;
 	padding: 10px;
-	border:double;
+	border: solid;
 	color:#000;
 }
 
