@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Marley's Gallery</title>
+		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+		<link rel="shortcut icon" type="image/png" href="../apple-touch-icon.png">
+	</head>
+	
+	<body>
+		<div id="bodywrap">
+			<h1>Marley's Python Stuff</h1>
+			
+			<hr>
+
+			<p>This is some stuff I've done in Python.</p>
+			
+			<hr>
+			
+<pre>
+#RPG in Python (O_O) (OoO) (O-O) (O_-)
+
+#import random library
+import random
+
+#function to display the player's stats
+def print_player(player):
+    print("Player stats:")
+    for key in sorted(player):
+        print(key + " is " + str(player[key]))
+
+#function to calculate experience earned
+def compute_experience(player, damage):
+    player["experience"] += random.randrange(0, damage*2)
+
+#function to deal damage to the player
+def take_damage(player, damage):
+    player["health"] -= damage
+    compute_experience(player, damage)
+    #check if player is dead
+    if player["health"] <= 0:
+        player["alive"] = False
+
+#main game begins
+player = {"name": "Sheldor", "title": "The Conqueror", "health": 100, "experience": 0, "mana": 10, "alive": True, "inventory": []}
+player["inventory"].append("Sword of Azeroth")
+compute_experience(player, 100)
+while player["alive"]:
+    print_player(player)
+    take_damage(player, 5)
+print("player dead")
+
+</pre>
+			
+			<hr>
+
+			<p><a href="../">Return to the home page.</a></p>
+		</div>
+	</body>
+</html>
