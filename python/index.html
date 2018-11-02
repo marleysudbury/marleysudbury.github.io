@@ -16,41 +16,15 @@
 			
 			<hr>
 			
-<pre>
-#RPG in Python (O_O) (OoO) (O-O) (O_-)
+			<h3>Papa Kirill's Pizzeria</h3>
 
-#import random library
-import random
+			<img src="https://github.com/marleysudbury/PapaKirill/raw/master/papakirill.PNG" width=100%>
 
-#function to display the player's stats
-def print_player(player):
-    print("Player stats:")
-    for key in sorted(player):
-        print(key + " is " + str(player[key]))
-
-#function to calculate experience earned
-def compute_experience(player, damage):
-    player["experience"] += random.randrange(0, damage*2)
-
-#function to deal damage to the player
-def take_damage(player, damage):
-    player["health"] -= damage
-    compute_experience(player, damage)
-    #check if player is dead
-    if player["health"] <= 0:
-        player["alive"] = False
-
-#main game begins
-player = {"name": "Sheldor", "title": "The Conqueror", "health": 100, "experience": 0, "mana": 10, "alive": True, "inventory": []}
-player["inventory"].append("Sword of Azeroth")
-compute_experience(player, 100)
-while player["alive"]:
-    print_player(player)
-    take_damage(player, 5)
-print("player dead")
-
-</pre>
+			<p>This text-based RPG was developed by a team of fellow students, and myself. There is a bit of documentation on the Github wiki, so give it a whirl.</p>
+			<p>I specifically did the evidence system, the combat system and a few bits of bug fixing. Our game won the votes of fellow students (I think due to the engaging story), and as a result of this I got the <em>SQL Pocket Guide</em>.</p>
 			
+			<p>Github link: <a href="https://github.com/marleysudbury/PapaKirill/">https://github.com/marleysudbury/PapaKirill/</a></p>
+
 			<hr>
 
 			<p><a href="../">Return to the home page.</a></p>
