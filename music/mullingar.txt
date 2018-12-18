@@ -1,4 +1,19 @@
-﻿   C         G             Am          F
+My Mullingar Town - Foster & Allen
+Documented by Marley Sudbury
+
+No capo
+
+C:  x32010
+G:  320003
+Am: x02210
+F:  133211
+E:  022100
+D:  xx0232
+A:  x02220
+Bm: x24432
+F#: 244322
+
+   C         G             Am          F
 In Mullingar Town with the sun shining down
        C               G              C         G
 At the fleadhs and the feis’s and the fairs
@@ -12,25 +27,41 @@ And by the auld Dublin Bridge, I played reels and slip jigs
 As me fingers, they danced up and down
        C            G        Am          F
 Now, I long for the day when again I can play
-        C               G         C
-The old squeezebox from Mullingar Town
+        C                G         C
+The old squeezebox round Mullingar Town
 
+  C            G          Am              F
 I remember the day when I earned my first pay
+       C          G           C         G
 I went off to the second hand shop
+       C             G              Am          F
 I paid ten shillings down, and each week half a crown
-‘til I paid for me little squeexzebox
+       C           G             C
+‘til I paid for me little squeezebox
+      Am                        E
 And I practiced each day ‘til I learned how to play
+        G             D            G
 ‘til me fingers could dance up and down
+      C         G       Am               F
 In my little bedroom, I learned my first tune
+      C             G         C
 On me squeezebox in Mullingar Town
 
+     C           G      A           F
 Each year on the day, I went off to play
+         C           G            C         G
 With the feis at the grand County Hall
+    C             G             Am          F
 And feeling right proud, with a mighty fine crowd
+   C                 G        C
 Of three hundred and fifty in all
+     Am                         E
 Step dancers, galore, who could burn up the floor
+     G              D         G
 Fine musicians made beautiful sounds
+         C           G         Am                F
 But they all came to see young Ritchie Tommy and me
+      C             G         C
 On me squeezebox in Mullingar Town
 
 ** Key change here **
@@ -52,11 +83,19 @@ And, I’ll be back to stay, forever to play
        D               A         D
 Me old squeezebox from Mullingar Town
 
+   D         A              Bm          G
 In Mullingar Town, with the sun shining down
+       A               D              A
 At the fleadhs and the feis’s and the fairs
+       D            A              Bm            G
 At the weddings and wakes, and the sports by the lakes
+          D              A           D
 I’ll play tunes ‘til the dawn of the day
+           Bm                            F#
 And by the auld Dublin Bridge, I’ll play reels and slip jigs
+       A            E            A
 And me fingers will dance up and down
+        D            A        Bm      G
 I’ll be back home to stay, forever to play
+        D               A         D
 The old squeezebox from Mullingar Town
