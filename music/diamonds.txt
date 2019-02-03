@@ -3,7 +3,7 @@ Documented by Marley Sudbury
 
 Capo on I
 
-E:     022000
+Em:    022000
 C:     x32010
 G:     320001
 D:     xx0232
