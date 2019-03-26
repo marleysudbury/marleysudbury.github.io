@@ -5,6 +5,7 @@
 		<title>Marley's Website</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="shortcut icon" type="image/png" href="apple-touch-icon.png">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	
 	<body>
@@ -13,28 +14,25 @@
 			
 			<hr>
 
-			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="python">Python</a></li>
-				<li><a href="blog">Blog</a></li>
-				<li><a href="gallery">Gallery</a></li>
-				<li><a href="contact">Contact</a></li>
-				<li><a href="https://users.cs.cf.ac.uk/SudburyMS">University</a></li>
-				<li><a href="https://codepen.io/marleysudbury/">Codepen</a></li>
-				<li><a href="music">Songs</a></li>
-			</ul>
+			<!--Navigation bar-->
+			<div id="nav-placeholder">
+
+			</div>
+
+			<script>
+			$(function(){
+				$("#nav-placeholder").load("navigation.html");
+			});
+			</script>
+			<!--end of Navigation bar-->
 
 			<div style="clear:both;"></div>
 			
 			<hr>
 			
-			<p>Hello! My name is Marley and I'm a computer science student.<br><em>Shw' mae! Marley dw i a dw i'n astudio cyfrifiadureg.</em></p>
+			<p>Hello! My name is Marley and I'm a computer science student.</p>
 			
-			<p>This website is a collection of various things I've made.</p>
-			
-			<hr>
-
-			<p><em>BTW this website is under construction so not much to be seen :P</em></p>
+			<p>This website is a collection of various things I've made or am making. I hope you enjoy!</p>
 
 			<hr>
 			

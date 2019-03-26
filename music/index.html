@@ -5,6 +5,7 @@
 		<title>Marley's Songbook</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 		<link rel="shortcut icon" type="image/png" href="../apple-touch-icon.png">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	
 	<body>
@@ -13,16 +14,17 @@
 			
 			<hr>
 			
-			<ul>
-				<li><a href="../">Home</a></li>
-				<li><a href="../python">Python</a></li>
-				<li><a href="../blog">Blog</a></li>
-				<li><a href="../gallery">Gallery</a></li>
-				<li><a href="../contact">Contact</a></li>
-				<li><a href="https://users.cs.cf.ac.uk/SudburyMS">University</a></li>
-				<li><a href="https://codepen.io/marleysudbury/">Codepen</a></li>
-				<li><a href="">Songs</a></li>
-			</ul>
+			<!--Navigation bar-->
+			<div id="nav-placeholder">
+
+			</div>
+
+			<script>
+			$(function(){
+				$("#nav-placeholder").load("../navigation.html");
+			});
+			</script>
+			<!--end of Navigation bar-->
 			
 			<div style="clear:both;"></div>
 			
@@ -31,6 +33,7 @@
 			<p>This is my songbook. Songs written by me are my copyright; songs not written by me are not, but their presence here is protected by fair-use legislation.</p>
 			
 			<p>The chords are displayed in .txt files. Ensure that you use a mono-space font so that they line up with the lyrics.</p>
+			
 			<p>Please mail in any corrections.</p>
 			
 			<hr>
@@ -45,8 +48,8 @@
 			<p><strong>J</strong></p>
 			<p><a href="diamonds.txt"><em>Diamonds and Rust</em> by Joan Baez</a></p>
 			
-			<p><strong>M</strong>
-			<p><a href="blonde.txt"><em>Blonde Hair</em> by Marley Sudbury</a></p>
+			<!--<p><strong>M</strong>
+			<p><a href="blonde.txt"><em>Blonde Hair</em> by Marley Sudbury</a></p>-->
 		</div>
 	</body>
 </html>

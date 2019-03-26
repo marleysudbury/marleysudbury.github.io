@@ -4,6 +4,7 @@
 		<title>Marley's Blog</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 		<link rel="shortcut icon" type="image/png" href="../apple-touch-icon.png">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	
 	<body>
@@ -12,16 +13,17 @@
 			
 			<hr>
 
-			<ul>
-				<li><a href="../">Home</a></li>
-				<li><a href="../python">Python</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="../gallery">Gallery</a></li>
-				<li><a href="../contact">Contact</a></li>
-				<li><a href="https://users.cs.cf.ac.uk/SudburyMS">University</a></li>
-				<li><a href="https://codepen.io/marleysudbury/">Codepen</a></li>
-				<li><a href="../music">Songs</a></li>
-			</ul>
+			<!--Navigation bar-->
+			<div id="nav-placeholder">
+
+			</div>
+
+			<script>
+			$(function(){
+				$("#nav-placeholder").load("../navigation.html");
+			});
+			</script>
+			<!--end of Navigation bar-->
 
 			<div style="clear:both;"></div>
 			
@@ -31,7 +33,17 @@
 			
 			<hr>
 			
-			<!--<a href="2018/09/28" class="blog">
+			<a href="2019/03/26" class="blog">
+				<span>
+					<h2>My First Flask Site - 26/03/2019</h2>
+
+					<p>I recently undertook a project to build an e-commerce website using Python, Flask, SQL and a bunch of other things, most of which were completely new to me. Here's how that went...</p>
+				</span>
+			</a>
+			
+			<hr>
+			
+			<a href="2018/09/28" class="blog">
 				<span>
 					<h2>Website Redesigned - 28/09/2018</h2>
 
@@ -47,9 +59,7 @@
 
 					<p>The domain of my first website, arinazil.co.uk is about to expire. It's been a pretty cool ride, over the last 2 years, even though I can't remember anything terribly important happening there. Let's take a trip down memory lane...</p>
 				</span>
-			</a>-->
-				
-			<p>I'm currently moving the blogs here from the old site, gimmie a moment.</p>
+			</a>
 				
 			<hr>
 

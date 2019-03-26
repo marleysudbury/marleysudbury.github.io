@@ -4,6 +4,7 @@
 		<title>Marley's Gallery</title>
 		<link rel="stylesheet" type="text/css" href="../stylesheet.css">
 		<link rel="shortcut icon" type="image/png" href="../apple-touch-icon.png">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 	
 	<body>
@@ -12,18 +13,17 @@
 			
 			<hr>
 
-			<ul>
-				<li><a href="../">Home</a></li>
-				<li><a href="../python">Python</a></li>
-				<li><a href="../blog">Blog</a></li>
-				<li><a href="">Gallery</a></li>
-				<li><a href="../contact">Contact</a></li>
-				<li><a href="https://users.cs.cf.ac.uk/SudburyMS">University</a></li>
-				<li><a href="https://codepen.io/marleysudbury/">Codepen</a></li>
-				<li><a href="../music">Songs</a></li>
-			</ul>
+			<!--Navigation bar-->
+			<div id="nav-placeholder">
 
-			<div style="clear:both;"></div>
+			</div>
+
+			<script>
+			$(function(){
+				$("#nav-placeholder").load("../navigation.html");
+			});
+			</script>
+			<!--end of Navigation bar-->
 			
 			<hr>
 			
