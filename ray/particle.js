@@ -10,7 +10,7 @@ class Particle {
     this.pos = createVector(px, py);
     this.rays = [];
     for (let a = facing-(fov/2); a < facing+(fov/2); a += fov/res) {
-      this.rays.push(new Ray(this.pos, radians(a)));
+      this.rays.push(new Ray(this.pos, radians(a)+facing));
     }
   }
 
