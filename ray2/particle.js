@@ -10,7 +10,15 @@ class Particle {
     this.pos = createVector(px, py);
     this.rays = [];
     for (let a = facing-(fov/2); a < facing+(fov/2); a += fov/res) {
-      this.rays.push(new Ray(this.pos, radians(a)));
+      if (a < facing) {
+        let vecNew = createVector(this.pos.x, this.pos.y - 10);
+        vecNew.y += this.rays.length * (20/fov/res);
+        this.rays.push(new Ray(vecNew, radians(a)));
+      } else {
+        let vecNew = createVector(this.pos.x, this.pos.y + 10);
+        vecNew.y -= this.rays.length * (20/fov/res);
+        this.rays.push(new Ray(vecNew, radians(a)));
+      }
     }
   }
 
@@ -51,5 +59,6 @@ class Particle {
   show() {
     fill(255);
     ellipse(this.pos.x, this.pos.y, 4);
+    line(this.pos.x, this.pos.y-10, this.pos.x, this.pos.y+10);
   }
 }
