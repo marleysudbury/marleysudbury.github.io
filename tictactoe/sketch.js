@@ -23,7 +23,7 @@ function setup() {
     h = height / 3;
 }
 
-function mouseClicked() {
+function clickFunc() {
     if (mouseX < width && mouseY < height) {
         // floor(3*(399/400))
         let i = floor(3*(mouseX/width));
@@ -41,6 +41,14 @@ function mouseClicked() {
             goes++;
         }
     }
+}
+
+function mouseClicked() {
+    clickFunc();
+}
+
+function touchStarted() {
+    clickFunc();
 }
 
 function check3(a, b, c) {
