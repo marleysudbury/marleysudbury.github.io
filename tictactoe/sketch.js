@@ -24,22 +24,27 @@ function setup() {
 }
 
 function clickFunc() {
-    if (mouseX < width && mouseY < height) {
+    let i = 0;
+    let j = 0;
+    if (touches.length > 0) {
+        i = floor(3*(touches[0].x/width));
+        j = floor(3*(touches[0].y/height));
+    } else if (mouseX < width && mouseY < height) {
         // floor(3*(399/400))
-        let i = floor(3*(mouseX/width));
-        let j = floor(3*(mouseY/height));
-        if (board[j][i] == '') {  
-            board[j][i] = currentPlayer;
+        i = floor(3*(mouseX/width));
+        j = floor(3*(mouseY/height));
+    }
+    if (board[j][i] == '') {  
+        board[j][i] = currentPlayer;
 
-            // Swap the players
-            if (currentPlayer == players[0]) {
-                currentPlayer = players[1];
-            } else {
-                currentPlayer = players[0];
-            }
-            
-            goes++;
+        // Swap the players
+        if (currentPlayer == players[0]) {
+            currentPlayer = players[1];
+        } else {
+            currentPlayer = players[0];
         }
+        
+        goes++;
     }
 }
 
