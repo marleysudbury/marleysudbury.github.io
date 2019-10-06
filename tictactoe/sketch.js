@@ -16,11 +16,14 @@ let goes = 0;
 let w;
 let h;
 
+let checkAI;
+
 function setup() {
     createCanvas(400, 400);
-    currentPlayer = random(players);
+    currentPlayer = players[0];
     w = width / 3;
     h = height / 3;
+    checkAI = createCheckbox("AI?", false);
 }
 
 function clickFunc() {
@@ -29,11 +32,16 @@ function clickFunc() {
     if (touches.length > 0) {
         i = floor(3*(touches[0].x/width));
         j = floor(3*(touches[0].y/height));
+        clickFunc2(i, j);
     } else if (mouseX < width && mouseY < height) {
         // floor(3*(399/400))
         i = floor(3*(mouseX/width));
         j = floor(3*(mouseY/height));
+        clickFunc2(i, j);
     }
+}
+
+function clickFunc2(i, j) {
     if (board[j][i] == '') {  
         board[j][i] = currentPlayer;
 
