@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marley's Blog</title>
+    <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="../../../../apple-touch-icon.png">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <div id="bodywrap">
+        <h1>Marley's Blog</h1>
+
+        <hr>
+
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+
+        </div>
+
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("../../../../navigation.html");
+            });
+        </script>
+        <!--end of Navigation bar-->
+
+        <hr>
+
+        <p>Making a Calculator in SwiftUI - 28/05/2020</p>
+
+        <hr>
+
+        <p>
+            I have had a lot of spare time recently. Er, actually I haven't, but I decided to learn a new type of
+            programming anyway. Who cares about exams, am I right? Well anyway, over the last year I worked with a group
+            on a project to develop a mobile application using a language called React Native. The big advantage of
+            React Native is that you can simply write the app once and have it work (almost) on both iOS and Android.
+            However, I didn't really spend the time to understand it properly, and to be honest my code was quite awful.
+            To wash that bitter taste from my mouth I though I would <em>properly</em> develop a mobile app.
+        </p>
+
+        <p>
+            First, I updated XCode on my MacBook. This was harder than I thought it would be, due to a very chonky
+            download size that my poor little SSD was not willing to work with. Thus, I engaged in a mass deletion of
+            all the crud that has accrued on my laptop over the years. Then I watched a Stanford University lecture
+            about Swift (search for this on the iTunesU app), and did the <a
+                href="https://developer.apple.com/tutorials/swiftui/tutorials">official Apple tutorials</a>. I felt
+            ready to take a step out on my own.
+        </p>
+
+        <figure>
+            <img width="100%" src="1_XCode.png">
+            <figcaption>
+                The XCode launch screen. No, I can't remember what 'SDL Tile Game' is, sorry.
+            </figcaption>
+        </figure>
+
+        <p>
+            I decided on a calculator because, um, I guess I'm not feeling very inspired at the moment. In fact, I am so
+            uninspired that I literally have just copied the iOS calculator design. I fully expect a cease and desist
+            through the door from apple at any moment. I may, in fact, have to adjust the colours and button shapes, but
+            that's something I'll think about later.
+        </p>
+
+        <p>
+            Pretty much the first day of the project was spend on the design of the app, looking at what I came up with
+            is, um, interesting.
+        </p>
+
+        <figure>
+            <img width="24%" src="4_Proto1.png">
+            <img width="24%" src="5_Proto2.png">
+            <img width="24%" src="6_Proto3.png">
+            <img width="24%" src="7_Proto4.png">
+            <figcaption>
+                Various designs of the app. I was somewhat frustrated by the intervention of my phone's darkmode.
+            </figcaption>
+        </figure>
+
+        <p>
+            The colours are managed using an xcasset catalogue, so they can be modified without changing any code. It
+            also copes brilliantly with dark mode, and accessibility features (which I have not implemented, to my
+            shame).
+        </p>
+
+        <figure>
+            <img width="100%" src="8_Colors.png">
+            <figcaption>
+                The xcasset catalogue used to manage the different colours used througout the app.
+            </figcaption>
+        </figure>
+
+        <p>
+            Once the design was (sort of) done, it was time to implement the functionality. Whilst the adding,
+            subtracting etc. were simple to implement, getting it working with the interface was a rather large pain.
+            One of the saving graces was using EvironmentObjects to store data that needed to be accessed throughout the
+            app (such as the display value). I implemented this in a class called DataStoreXD, instanciated as appData.
+        </p>
+
+        <p>
+            I will now tell you about some of the bugs I encountered, as a cautionary tale. The first bug was that <a
+                href="https://github.com/marleysudbury/swiftui-calculator/issues/1">if a
+                calculation resulted in a value greater than 999 it would crash the app</a>, even though the user could
+            manually type a number much large than that with no issue. This really stumped me, until I explained the
+            issue to someone and it immediately clicked in my head that 1000 was the first value being displayed with
+            commas in it. Even once I had figured this out, it took me a while to figure out how this was crashing the
+            app. Well, it turns out I was trying to insert the commas after calculation, even though this process was
+            being done when the value is displayed on the screen. Oops. At least I could solve the problem using only
+            the backspace key.
+        </p>
+
+        <p>
+            Another bug was that if the user typed a number, then pressed an operation button, then entered the same
+            number, <a href="https://github.com/marleysudbury/swiftui-calculator/issues/10">any additional input would
+                override the value</a>. This is as a result of a cheeky thing I was doing where I would compare the
+            current screen to the value to the cached value to see if the value should be overrided (as it should be if
+            the value is 0 or if an operation button has been pressed). The solution to this was to remove that silly
+            logic and add a global flag to determine if input should override the value.
+        </p>
+
+        <p>
+            I also had quite a bit of trouble with <a
+                href="https://github.com/marleysudbury/swiftui-calculator/issues/2">getting the value to be constrained
+                in length</a>. This was pretty much a problem with using &lt; rather than &leq;, which goes to show that
+            just because I have been programming for a very long time doesn't mean I am anywhere near good at it.
+        </p>
+
+        <p>
+            Other than that, though, things pretty much went without a hitch. I may do some more work on it, fixing any
+            bugs that appear, improving the splash screen and the icon, and maybe making the style a bit more unique.
+            However, I feel like I have already spent quite a large amount of time on this given that it isn't really
+            that useful. In conclusion, I am a big fan of Swift and SwiftUI, and I hope I can use them on similar
+            projects in the future. Maybe even something that's slightly interesting.
+        </p>
+
+        <figure>
+            <img width="49%" src="2_Apple.png">
+            <img width="49%" src="3_Mine.png">
+            <figcaption>
+                Left: the iOS calculator (c) Apple. Right: the app I made. As you can see, there are some subtle
+                differences.
+            </figcaption>
+        </figure>
+
+        <p>
+            Thanks for reading! If you wish to continue this magical journey, head over to <a
+                href="https://github.com/marleysudbury/swiftui-calculator">the Github repo</a>.
+        </p>
+
+        <hr>
+
+        <p><a href="../../../">Return to the blog page.</a></p>
+    </div>
+</body>
+
+</html>

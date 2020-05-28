@@ -59,3 +59,13 @@ hr {
         margin-right: 0;
     }
 }
+
+figure {
+	padding: 0;
+	margin: 0;
+}
+
+figcaption {
+	text-align: center;
+	font-size: small;
+}
