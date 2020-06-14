@@ -57,14 +57,14 @@ hr {
 	color: black;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
     html {
         margin-left: calc(100vw - 100%);
         margin-right: 0;
     }
     
     #bodywrap {
-	    width: 502px;
+	    width: 800px;
         /* width: 960px; */
 	    margin: 0 auto;
     }
