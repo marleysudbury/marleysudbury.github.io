@@ -3,16 +3,19 @@
 	margin: 0;
 	padding: 0;
 	padding-bottom: 71px;
+    max-width: 800px;
 }
 
 .menubutton1 {
 	float: left;
 	width: 50%;
+    max-width: 400px;
 }
 
 .menubutton2 {
 	float: left;
 	width: 25%;
+    max-width: 200px;
 }
 
 .menubutton1 a, .menubutton2 a {
@@ -35,7 +38,8 @@
 }
 
 #bodywrap {
-	width: 502px;
+	/* width: 502px; */
+    width: 100%;
 	margin: 0 auto;
 }
 
@@ -53,10 +57,16 @@ hr {
 	color: black;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 800px) {
     html {
         margin-left: calc(100vw - 100%);
         margin-right: 0;
+    }
+    
+    #bodywrap {
+	    width: 502px;
+        /* width: 960px; */
+	    margin: 0 auto;
     }
 }
 
@@ -77,10 +87,11 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+	.blog           { color: white; }
 	a               { color: rgb(114, 202, 236); }
 	a:visited       { color: rgb(166, 103, 182); }
-	a .blog         { color: white; }
-	a:visited .blog { color: white; }
+	a.blog          { color: white; }
+	a:visited.blog  { color: white; }
 	.menubutton1 a, .menubutton2 a {
 		color: white;
 		border-color: white;
@@ -90,7 +101,6 @@ body {
 		color: black;
 		background-color: white;
 	}
-	.blog { color: white; }
 	hr    { background-color: white; }
 	body  { background: rgb(30, 30, 30); color: white; }
 }
