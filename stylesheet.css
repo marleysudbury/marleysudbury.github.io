@@ -82,6 +82,10 @@ p {
     
 }
 
+#returnHome2 {
+    padding: 10px;
+}
+
 #returnHome a {
     color: white;
     text-decoration: none;
@@ -137,8 +141,8 @@ p {
 */
     
     #returnHome {
-        width: 600px;
-        margin: 0 auto;
+/*        width: 600px;*/
+/*        margin: 0 auto;*/
     }
     
     #bodywrap {
