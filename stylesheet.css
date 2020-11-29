@@ -1,66 +1,166 @@
-#navbar {
-	list-style: none;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	padding-bottom: 71px;
-    max-width: 800px;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-.menubutton1 {
-	float: left;
-	width: 50%;
-    max-width: 400px;
-}
-
-.menubutton2 {
-	float: left;
-	width: 25%;
-    max-width: 200px;
-}
-
-.menubutton1 a, .menubutton2 a {
-	text-align: center;
-	/*width: 25%;*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
 	display: block;
-	padding: 8px;
-	border: solid;
-	margin-right: -1px;
-	margin-bottom: -1px;
-	color: black;
-	text-decoration: none;
-	border-width: 1px;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.menubutton1 a:hover, .menubutton2 a:hover {
-	border-color: black;
-	color: white;
-	background-color: black;
+/* Marley's CSS beigns */
+
+h1 {
+    font-size: 32pt;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size:18pt;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+#returnHome {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+	margin: 0 auto;
+    background: black;
+    color: white;
+    vertical-align: middle;
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    
+}
+
+#returnHome2 {
+    padding: 10px;
+}
+
+#returnHome a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 #bodywrap {
-	/* width: 502px; */
     width: 100%;
 	margin: 0 auto;
-}
-
-hr {
-	/* border-color: black;
-	border-width: 0.2px; */
-	
-	border: none;
-	height: 1px;
-	background-color: black;
 }
 
 .blog {
 	text-decoration: none;
 	color: black;
+    background: #FEFEFE;
+    margin-bottom: 20px;
+    padding:10px;
 }
 
-@media screen and (min-width: 850px) {
+.blog h2 {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.blog figcaption {
+    margin-bottom: 0px;
+    font-style: normal;
+}
+
+figcaption {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 90%;
+}
+
+.blog a {
+    text-decoration: none;
+    color: black;
+}
+
+.blog img {
+    width: 100%;
+}
+
+.blog figure {
+    text-align: center;
+}
+
+ul {
+    list-style: square;
+    margin-bottom: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.w49 {
+    max-width: 49%;
+}
+
+@media screen and (min-width: 650px) {
+/*
     html {
         margin-left: calc(100vw - 100%);
         margin-right: 0;
+        margin:0px;
+    }
+*/
+    
+    #returnHome {
+/*        width: 600px;*/
+/*        margin: 0 auto;*/
     }
     
     #bodywrap {
@@ -70,37 +170,27 @@ hr {
     }
 }
 
-figure {
-	padding: 0;
-	margin: 0;
-}
-
-figcaption {
-	text-align: center;
-	font-size: small;
-}
-
 body {
 	font-family: sans-serif;
+    font-size: 13pt;
 	color: black;
 	background-color: white;
 }
 
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    margin: 0px;
+}
+
 @media (prefers-color-scheme: dark) {
-	.blog           { color: white; }
+	.blog           { color: white; background: rgb(50,50,50); }
 	a               { color: rgb(114, 202, 236); }
 	a:visited       { color: rgb(166, 103, 182); }
-	a.blog          { color: white; }
-	a:visited.blog  { color: white; }
-	.menubutton1 a, .menubutton2 a {
-		color: white;
-		border-color: white;
-	}
-	.menubutton1 a:hover, .menubutton2 a:hover {
-		border-color: white;
-		color: black;
-		background-color: white;
-	}
-	hr    { background-color: white; }
+	.blog a         { color: white; }
+	.blog a:visited { color: white; }
 	body  { background: rgb(30, 30, 30); color: white; }
 }
