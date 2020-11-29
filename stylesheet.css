@@ -51,16 +51,19 @@ table {
 
 h1 {
     font-size: 32pt;
-    padding: 0.3em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 h2 {
     font-size:18pt;
-    padding: 0.3em;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
 p {
-    padding: 0.3em;
+    margin-bottom: 20px;
 }
 
 #returnHome {
@@ -94,7 +97,17 @@ p {
 	text-decoration: none;
 	color: black;
     background: #FEFEFE;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    padding:10px;
+}
+
+.blog h2 {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.blog figcaption {
+    margin-top: 10px;
 }
 
 .blog a {
@@ -115,10 +128,13 @@ p {
 }
 
 @media screen and (min-width: 850px) {
+/*
     html {
         margin-left: calc(100vw - 100%);
         margin-right: 0;
+        margin:0px;
     }
+*/
     
     #returnHome {
         width: 600px;
@@ -137,6 +153,15 @@ body {
     font-size: 13pt;
 	color: black;
 	background-color: white;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    margin: 0px;
 }
 
 @media (prefers-color-scheme: dark) {
