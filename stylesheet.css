@@ -63,6 +63,13 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size:16pt;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
 p {
     margin-bottom: 20px;
 }
@@ -168,6 +175,11 @@ li {
         /* width: 960px; */
 	    margin: 0 auto;
     }
+}
+
+.chart {
+    background-color: white;
+    margin-bottom: 20px;
 }
 
 body {
