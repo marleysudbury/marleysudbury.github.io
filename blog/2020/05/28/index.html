@@ -19,40 +19,28 @@
         </p>
 
         <p>
-            I have had a lot of spare time recently. Er, actually I haven't, but I decided to learn a new type of
-            programming anyway. Who cares about exams, am I right? Well anyway, over the last year I worked with a group
-            on a project to develop a mobile application using a language called React Native. The big advantage of
-            React Native is that you can simply write the app once and have it work (almost) on both iOS and Android.
-            However, I didn't really spend the time to understand it properly, and to be honest my code was quite awful.
-            To wash that bitter taste from my mouth I though I would <em>properly</em> develop a mobile app.
+            I have had a lot of spare time recently. Er, actually I haven't, but I decided to learn a new
+            programming language anyway. Over the past year I worked as part of a group
+            developing a mobile application using <a href="https://reactnative.dev/">React Native</a>. The big advantage of
+            React Native is that you can simply write the app once and have it work on both iOS and Android.
+            To improve my understanding of app development, I thought I'd try making an app in <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>, which is Apple's language for making iOS apps.
         </p>
 
         <p>
-            First, I updated XCode on my MacBook. This was harder than I thought it would be, due to a very chonky
-            download size that my poor little SSD was not willing to work with. Thus, I engaged in a mass deletion of
-            all the crud that has accrued on my laptop over the years. Then I watched a Stanford University lecture
-            about Swift on the iTunesU app, and did the <a
-                href="https://developer.apple.com/tutorials/swiftui/tutorials">official Apple tutorials</a>. I felt
+            The first step was to update XCode on my Macbook, as I hadn't used it since before SwiftUI was released. This proved to be a fairly difficult step due to a combination of a large download size and a small SSD. After it was up to date, I watched some videos about the language and did the <a
+                href="https://developer.apple.com/tutorials/swiftui/tutorials">official Apple tutorials</a>. Then I felt
             ready to take a step out on my own.
         </p>
 
         <figure>
             <img width="100%" src="1_XCode.png">
             <figcaption>
-                The XCode launch screen. No, I can't remember what 'SDL Tile Game' is, sorry.
+                The XCode launch screen.
             </figcaption>
         </figure>
 
         <p>
-            I decided on a calculator because, um, I guess I'm not feeling very inspired at the moment. In fact, I am so
-            uninspired that I literally have just copied the iOS calculator design. I fully expect a cease and desist
-            through the door from apple at any moment. I may, in fact, have to adjust the colours and button shapes, but
-            that's something I'll think about later.
-        </p>
-
-        <p>
-            Pretty much the first day of the project was spent on the design of the app. Looking at what I came up with
-            is&hellip; interesting.
+            I decided on a calculator because it offers some challenges but is not too complex for a first project. In terms of the design of the app, I went for pretty much the stock iOS calculator look.
         </p>
 
         <figure>
@@ -61,14 +49,13 @@
             <img width="24%" src="6_Proto3.png">
             <img width="24%" src="7_Proto4.png">
             <figcaption>
-                Various designs of the app. I was somewhat frustrated by the intervention of my phone's darkmode.
+                Various designs of the app.
             </figcaption>
         </figure>
 
         <p>
             The colours are managed using an xcasset catalogue, so they can be modified without changing any code. It
-            also copes brilliantly with dark mode, and accessibility features (which I have not implemented, to my
-            shame).
+            also copes brilliantly with dark mode and accessibility features.
         </p>
 
         <figure>
@@ -79,8 +66,8 @@
         </figure>
 
         <p>
-            Once the design was (sort of) done, it was time to implement the functionality. Whilst the adding,
-            subtracting etc. were simple to implement, getting it working with the interface was a rather large pain.
+            Once the design was mostly done, it was time to implement the functionality. Whilst the adding,
+            subtracting etc. were simple to implement, getting it working with the interface was a bit tricky.
             One of the saving graces was using EvironmentObjects to store data that needed to be accessed throughout the
             app (such as the display value). I implemented this in a class called DataStoreXD, instanciated as appData.
         </p>
@@ -91,9 +78,8 @@
                 calculation resulted in a value greater than 999 it would crash the app</a>, even though the user could
             manually type a number much large than that with no issue. This really stumped me, until I explained the
             issue to someone and it immediately clicked in my head that 1000 was the first value being displayed with
-            commas in it. Even once I had figured this out, it took me a while to figure out how this was crashing the
-            app. Well, it turns out I was trying to insert the commas after calculation, even though this process was
-            being done when the value is displayed on the screen. Oops. At least I could solve the problem using only
+            commas in it. Even once I had figured this out, it took me a while to understand why this was crashing the
+            app. It was because the commas were being added in two places, and the second was expecting to receive a number not a string. At least I could solve the problem using only
             the backspace key.
         </p>
 
@@ -101,7 +87,7 @@
             Another bug was that if the user typed a number, then pressed an operation button, then entered the same
             number, <a href="https://github.com/marleysudbury/swiftui-calculator/issues/10">any additional input would
                 override the value</a>. This is as a result of a cheeky thing I was doing where I would compare the
-            current screen to the value to the cached value to see if the value should be overrided (as it should be if
+            current screen value to the cached value to see if the value should be overrided (as it should be if
             the value is 0 or if an operation button has been pressed). The solution to this was to remove that silly
             logic and add a global flag to determine if input should override the value.
         </p>
@@ -109,8 +95,7 @@
         <p>
             I also had quite a bit of trouble with <a
                 href="https://github.com/marleysudbury/swiftui-calculator/issues/2">getting the value to be constrained
-                in length</a>. This was pretty much a problem with using &lt; rather than &leq;, which goes to show that
-            just because I have been programming for a very long time doesn't mean I am anywhere near good at it.
+                in length</a>. This was essentially a problem with using &lt; rather than &leq;, AKA off by one error (OBOE).
         </p>
 
         <p>
@@ -137,7 +122,7 @@
     </div>
     
     <footer>
-        Last modified 29/11/2020
+        Last modified 26/04/2021
     </footer>
 </body>
 
