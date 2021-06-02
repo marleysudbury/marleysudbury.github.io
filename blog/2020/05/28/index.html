@@ -18,16 +18,17 @@
             Making a Calculator in SwiftUI - 28/05/2020
         </p>
 
+        <h2>Background</h2>
+
         <p>
-            I have had a lot of spare time recently. Er, actually I haven't, but I decided to learn a new
-            programming language anyway. Over the past year I worked as part of a group
+            Over the past year I worked as part of a group
             developing a mobile application using <a href="https://reactnative.dev/">React Native</a>. The big advantage of
             React Native is that you can simply write the app once and have it work on both iOS and Android.
             To improve my understanding of app development, I thought I'd try making an app in <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>, which is Apple's language for making iOS apps.
         </p>
 
         <p>
-            The first step was to update XCode on my Macbook, as I hadn't used it since before SwiftUI was released. This proved to be a fairly difficult step due to a combination of a large download size and a small SSD. After it was up to date, I watched some videos about the language and did the <a
+            The first step was to update XCode, as I hadn't used it since before SwiftUI was released. This proved to be a fairly difficult step due to a combination of a large download size and a small SSD. After it was up to date, I watched some videos about the language and did the <a
                 href="https://developer.apple.com/tutorials/swiftui/tutorials">official Apple tutorials</a>. Then I felt
             ready to take a step out on my own.
         </p>
@@ -68,9 +69,11 @@
         <p>
             Once the design was mostly done, it was time to implement the functionality. Whilst the adding,
             subtracting etc. were simple to implement, getting it working with the interface was a bit tricky.
-            One of the saving graces was using EvironmentObjects to store data that needed to be accessed throughout the
+            One of the saving graces was using EnvironmentObjects to store data that needed to be accessed throughout the
             app (such as the display value). I implemented this in a class called DataStoreXD, instanciated as appData.
         </p>
+
+        <h2>Bugs!</h2>
 
         <p>
             I will now tell you about some of the bugs I encountered, as a cautionary tale. The first bug was that <a
@@ -98,6 +101,8 @@
                 in length</a>. This was essentially a problem with using &lt; rather than &leq;, AKA off by one error (OBOE).
         </p>
 
+        <h2>In conclusion&hellip;</h2>
+
         <p>
             Other than that, though, things pretty much went without a hitch. I may do some more work on it, fixing any
             bugs that appear, improving the splash screen and the icon, and maybe making the style a bit more unique.
@@ -122,7 +127,7 @@
     </div>
     
     <footer>
-        Last modified 26/04/2021
+        Last modified 02/06/2021
     </footer>
 </body>
 

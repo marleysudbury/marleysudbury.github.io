@@ -152,6 +152,10 @@ li {
     margin-bottom: 5px;
 }
 
+em {
+    font-style: italic;
+}
+
 .w49 {
     max-width: 49%;
 }
@@ -187,6 +191,24 @@ body {
     font-size: 13pt;
 	color: black;
 	background-color: white;
+}
+
+header {
+    
+}
+
+#title {
+    display: block;
+    font-size:20pt;
+    /* font-weight: 600; */
+    /* font-style: italic; */
+    margin-bottom: 20px;
+}
+
+#date {
+    display: block;
+    font-style: italic;
+    padding-bottom: 20px;
 }
 
 footer {
