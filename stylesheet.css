@@ -101,7 +101,7 @@ p {
 }
 
 #bodywrap {
-    width: 100%;
+    width: 90%;
 	margin: 0 auto;
 }
 
@@ -145,7 +145,7 @@ figcaption {
 
 ul {
     list-style: square;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 li {
