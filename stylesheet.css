@@ -71,7 +71,13 @@ h3 {
 }
 
 p {
+    /* margin-top: 10px; */
     margin-bottom: 20px;
+}
+
+.blog p {
+    margin-bottom: 0px;
+    margin-top: 20px;
 }
 
 #returnHome {
@@ -110,7 +116,10 @@ p {
 	color: black;
     background: #FEFEFE;
     margin-bottom: 20px;
-    padding:10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .blog h2 {
@@ -119,15 +128,17 @@ p {
 }
 
 .blog figcaption {
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     font-style: normal;
+    text-align: left;
 }
 
 figcaption {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 5px;
     font-style: italic;
     font-size: 90%;
+    text-align: center;
 }
 
 .blog a {
@@ -135,8 +146,13 @@ figcaption {
     color: black;
 }
 
+img {
+    margin-bottom: 20px;
+}
+
 .blog img {
     width: 100%;
+    margin-bottom: 0px;
 }
 
 .blog figure {
