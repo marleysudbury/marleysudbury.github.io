@@ -51,8 +51,8 @@ table {
 
 h1 {
     font-size: 32pt;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     font-weight: bold;
 }
 
@@ -60,24 +60,21 @@ h2 {
     font-size:18pt;
     font-weight: 600;
     font-style: italic;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 h3 {
     font-size:16pt;
     font-weight: 500;
     font-style: italic;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 p {
-    /* margin-top: 10px; */
-    margin-bottom: 20px;
-}
-
-.blog p {
-    margin-bottom: 0px;
-    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #returnHome {
@@ -115,30 +112,30 @@ p {
 	text-decoration: none;
 	color: black;
     background: #FEFEFE;
+    margin-top: 10px;
     margin-bottom: 20px;
     padding-left: 10px;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-right: 10px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 
-.blog h2 {
+/* .blog h2 {
     margin-left: 0px;
     margin-bottom: 10px;
-}
-
-.blog figcaption {
-    /* margin-bottom: 0px; */
-    font-style: normal;
-    text-align: left;
-}
+} */
 
 figcaption {
-    margin-bottom: 20px;
-    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-style: italic;
     font-size: 90%;
     text-align: center;
+    line-height: 1.2;
+}
+
+.fourfigs img {
+    width: 49%;
 }
 
 .blog a {
@@ -147,12 +144,13 @@ figcaption {
 }
 
 img {
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .blog img {
     width: 100%;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
 }
 
 .blog figure {
@@ -161,11 +159,13 @@ img {
 
 ul {
     list-style: square;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 li {
-    margin-bottom: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
 }
 
 em {
@@ -176,30 +176,10 @@ em {
     max-width: 49%;
 }
 
-@media screen and (min-width: 650px) {
-/*
-    html {
-        margin-left: calc(100vw - 100%);
-        margin-right: 0;
-        margin:0px;
-    }
-*/
-    
-    #returnHome {
-/*        width: 600px;*/
-/*        margin: 0 auto;*/
-    }
-    
-    #bodywrap {
-	    width: 600px;
-        /* width: 960px; */
-	    margin: 0 auto;
-    }
-}
-
 .chart {
     background-color: white;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 body {
@@ -207,10 +187,7 @@ body {
     font-size: 13pt;
 	color: black;
 	background-color: white;
-}
-
-header {
-    
+    line-height: 1.6;
 }
 
 #title {
@@ -218,13 +195,16 @@ header {
     font-size:20pt;
     /* font-weight: 600; */
     /* font-style: italic; */
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 #date {
     display: block;
     font-style: italic;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-bottom: 20px; */
 }
 
 footer {
@@ -232,8 +212,21 @@ footer {
     color: white;
     text-align: center;
     padding-top: 10px;
-    padding-bottom:10px;
-    margin: 0px;
+    padding-bottom:40px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 650px) {
+    #bodywrap {
+	    width: 600px;
+	    margin: 0 auto;
+    }
+    .fourfigs img {
+        width: 24%;
+    }
+    footer {
+        padding-bottom: 10px;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
