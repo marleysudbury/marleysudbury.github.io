@@ -109,6 +109,7 @@ p {
 }
 
 .blog {
+    border-radius: 25px;
 	text-decoration: none;
 	color: black;
     background: #FEFEFE;
@@ -159,6 +160,7 @@ img {
 
 ul {
     list-style: square;
+    padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
