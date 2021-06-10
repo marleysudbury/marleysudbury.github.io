@@ -141,6 +141,10 @@ figcaption {
     text-align: center;
 }
 
+.fourfigs img {
+    width: 49%;
+}
+
 .blog a {
     text-decoration: none;
     color: black;
@@ -174,27 +178,6 @@ em {
 
 .w49 {
     max-width: 49%;
-}
-
-@media screen and (min-width: 650px) {
-/*
-    html {
-        margin-left: calc(100vw - 100%);
-        margin-right: 0;
-        margin:0px;
-    }
-*/
-    
-    #returnHome {
-/*        width: 600px;*/
-/*        margin: 0 auto;*/
-    }
-    
-    #bodywrap {
-	    width: 600px;
-        /* width: 960px; */
-	    margin: 0 auto;
-    }
 }
 
 .chart {
@@ -232,8 +215,21 @@ footer {
     color: white;
     text-align: center;
     padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom:40px;
     margin: 0px;
+}
+
+@media screen and (min-width: 650px) {
+    #bodywrap {
+	    width: 600px;
+	    margin: 0 auto;
+    }
+    .fourfigs img {
+        width: 24%;
+    }
+    footer {
+        padding-bottom: 10px;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
