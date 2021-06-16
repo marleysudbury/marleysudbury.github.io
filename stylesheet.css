@@ -112,7 +112,8 @@ p {
     border-radius: 10px;
 	text-decoration: none;
 	color: black;
-    background: #FEFEFE;
+    /* background: #FEFEFE; */
+    background: rgb(225,225,225);
     margin-top: 10px;
     margin-bottom: 20px;
     padding-left: 10px;
@@ -174,6 +175,10 @@ em {
     font-style: italic;
 }
 
+b {
+    font-weight: bold;
+}
+
 .w49 {
     max-width: 49%;
 }
@@ -231,11 +236,15 @@ footer {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/* 
+    The below CSS has been replaced with JavaScript
+*/
+
+/* @media (prefers-color-scheme: dark) {
 	.blog           { color: white; background: rgb(50,50,50); }
 	a               { color: rgb(114, 202, 236); }
 	a:visited       { color: rgb(166, 103, 182); }
 	.blog a         { color: white; }
 	.blog a:visited { color: white; }
 	body  { background: rgb(30, 30, 30); color: white; }
-}
+} */
