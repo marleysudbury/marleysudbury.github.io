@@ -9,19 +9,94 @@
 </head>
 
 <body>
+
+    <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+        <input type="checkbox" id="checkbox_theme">
+    </label>
+
+    <script>
+        //determines if the user has a set theme
+        function detectColorScheme(){
+            var theme="light";    //default to light
+
+            //local storage is used to override OS theme settings
+            if(localStorage.getItem("theme")){
+                if(localStorage.getItem("theme") == "dark"){
+                    var theme = "dark";
+                }
+            } else if(!window.matchMedia) {
+                //matchMedia method not supported
+                return false;
+            } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                //OS theme setting detected as dark
+                var theme = "dark";
+            }
+
+            //dark theme preferred, set document with a `data-theme` attribute
+            if (theme=="dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+        }
+        detectColorScheme();
+
+        //identify the toggle switch HTML element
+        const toggleSwitch = document.querySelector('#theme-switch input[type="checkbox"]');
+
+        //function that changes the theme, and sets a localStorage variable to track the theme between page loads
+        function switchTheme(e) {
+            if (e.target.checked) {
+                localStorage.setItem('theme', 'dark');
+                document.documentElement.setAttribute('data-theme', 'dark');
+                toggleSwitch.checked = true;
+                var sheet = window.document.styleSheets[0];
+                let rule1 = ".blog { color: white; background: rgb(50,50,50); }";
+                let rule2 = "a { color: rgb(114, 202, 236); }";
+                let rule3 = "a:visited { color: rgb(166, 103, 182); }";
+                let rule4 = ".blog a { color: white; }";
+                let rule5 = ".blog a:visited { color: white; }";
+                let rule6 = "body { background: rgb(30, 30, 30); color: white; }";
+                sheet.insertRule(rule1, sheet.cssRules.length);
+                sheet.insertRule(rule2, sheet.cssRules.length);
+                sheet.insertRule(rule3, sheet.cssRules.length);
+                sheet.insertRule(rule4, sheet.cssRules.length);
+                sheet.insertRule(rule5, sheet.cssRules.length);
+                sheet.insertRule(rule6, sheet.cssRules.length);
+            } else {
+                localStorage.setItem('theme', 'light');
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleSwitch.checked = false;
+            }    
+        }
+
+        //listener for changing themes
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        //pre-check the dark-theme checkbox if dark-theme is set
+        if (document.documentElement.getAttribute("data-theme") == "dark"){
+            toggleSwitch.checked = true;
+        }
+    </script>
+
     <div id="returnHome2">&nbsp;</div>
 
     <div style="float:right; padding:20px; font-size:large;background:rgb(225,225,225);border-top-left-radius:10px;border-bottom-left-radius:10px;" id="lightToggle">Change to dark mode</div>
 
     <div id="bodywrap">
         <h1>Marley Sudbury</h1>
+        
+        <div style="float:left; width: 40%; padding-right:20px">
+            <img src="/me_and_bert.jpeg" width="100%" style="border-radius: 10px;">
+        </div>
+        
 
         <p>
-            <b>New!</b> Press the button in the top right of the page to toggle between day and night mode. Your choice is stored persistantly using cookies.
+            <b>New!</b> Press the button in the top right of the page to toggle between day and night mode.
         </p>
 
         <p>Welcome to my website! I'm a computer science student, and here are some
             projects I've worked on. Click on an item to view more details.</p>
+
+        <div style="clear: both;"></div>
 
         <div class="blog">
             <a href="endorsement">
@@ -91,6 +166,10 @@
                 </p>
             </a>
         </div>
+
+        <p>
+            This website is built with love sweat and tears. To peak behind the curtain, <a href="https://github.com/marleysudbury/marleysudbury.github.io">checkout the Github repo</a>.
+        </p>
     </div>
 </body>
 

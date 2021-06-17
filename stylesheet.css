@@ -109,7 +109,7 @@ p {
 }
 
 .blog {
-    border-radius: 10px;
+    border-radius: 1em;
 	text-decoration: none;
 	color: black;
     /* background: #FEFEFE; */
