@@ -45,10 +45,10 @@ if (window.location.pathname != "/") {
 
 // This code puts the "Last modified" footer onto a page
 
-let footer = document.createElement("footer");
-let date = new Date(document.lastModified);
-date = date.toISOString();
-let node = document.createTextNode("Last modified " + date.substr(0, date.indexOf('T')));
-footer.appendChild(node);
-// var body = document.getElementsByName("body");
-document.body.appendChild(footer);
+// let footer = document.createElement("footer");
+// let date = new Date(document.lastModified);
+// date = date.toISOString();
+// let node = document.createTextNode("Last modified " + date.substr(0, date.indexOf('T')));
+// footer.appendChild(node);
+// // var body = document.getElementsByName("body");
+// document.body.appendChild(footer);
