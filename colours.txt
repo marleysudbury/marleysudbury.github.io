@@ -2,13 +2,9 @@ Checked on 2021-08-07
 According to https://webaim.org/resources/contrastchecker
 
 Dark Mode
-Text against (#FFFFFF) background (#1F1E1E): PASS
+Text (#FFFFFF) against background (#1F1E1E): PASS
 Link unread (#87C8E8) against background (#1F1E1E): PASS
-Link read (#9F6AB1) against background (#1F1E1E): FAIL {
-    Contrast Ratio: 4.09:1
-    Failed 3 of the 5 tests
-    Will need to be replaced
-}
+Link read (#FF6CFF replacing #9F6AB1) against background (#1F1E1E): PASS
 Text against card: PASS
 NOTE: Card has low contrast with background (1.29:1). This is potentially a problem.
 

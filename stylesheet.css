@@ -245,7 +245,7 @@ footer {
 @media (prefers-color-scheme: dark) {
 	.blog           { color: white; background: rgb(50,50,50); }
 	a               { color: rgb(114, 202, 236); }
-	a:visited       { color: rgb(166, 103, 182); }
+	a:visited       { color: #FF6CFF; }
 	.blog a         { color: white; }
 	.blog a:visited { color: white; }
 	body  { background: rgb(30, 30, 30); color: white; }
