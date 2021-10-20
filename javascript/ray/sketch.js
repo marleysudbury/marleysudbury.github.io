@@ -52,11 +52,11 @@ function draw() {
   }
   // Left
   if (keyIsDown(65)) {
-    facing -= 5;
+    facing -= 0.01;
   }
   // Right
   if (keyIsDown(68)) {
-    facing += 5;
+    facing += 0.01;
   }
   // Forwards
   if (keyIsDown(87)) {

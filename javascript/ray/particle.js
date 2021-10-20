@@ -26,7 +26,9 @@ class Particle {
       for (let wall of walls) {
         const pt = ray.cast(wall);
         if (pt) {
-          const d = p5.Vector.dist(this.pos, pt);
+          let d = p5.Vector.dist(this.pos, pt);
+          const a = ray.dir - facing;
+          d*=cos(a);
           if (d < record) {
             record = d;
             closest = pt;
