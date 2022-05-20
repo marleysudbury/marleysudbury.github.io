@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>Marley's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="/apple-touch-icon.png">
+</head>
+
+<body>
+    <div id="bodywrap">
+        <h1>Marley's Blog</h1>
+
+        <header>
+            <span id="title">A Sequence From the Past</span>
+            <span id="date">20/05/2022
+            </span>
+        </header>
+
+        <h2>Gobbledygook</h2>
+
+        <p>
+            That's a hard word to spell. Today I was looking ahead in my calendar to get a feel for how busy the next
+            few months would be. Whilst doing so, I saw an entry that was utterly incomprehensible.
+        </p>
+
+        <figure>
+            <img width="100%" src="1_calendar.png"
+                alt="Event in an Apple calendar on the sixth of August 2022 which reads: Sequence date, Date taken from integer 16 in my Sequence (6, 96)">
+            <figcaption>
+                The mysterious calendar entry.
+            </figcaption>
+        </figure>
+
+        <p>
+            My initial reaction to this was that Siri must have listened to me discussing programming with someone, and
+            mistaken it for an instruction to create an event. However, that answer didn't sit right with me. The words
+            were too well formed. If you want to work it out yourself, this is your last chance.
+        </p>
+
+        <h2>Glimmer of recognition</h2>
+
+        <p>
+            The word <em>Sequence</em> stirred something deep within me. I recall that at some point I was quite fond of
+            taking pairs of numbers and turning them into a sequence like the Fibonacci sequence. And since here there
+            was a pair of numbers, that seemed like a sensible place to start.
+        </p>
+
+        <p>
+            I put together a quick Python program to do the calculations for me.
+        </p>
+
+        <figure width="10%">
+            <code style="display: block; white-space: pre-wrap;">
+a = 6
+b = 96
+for i in range(0, 16):
+    print(a)
+    nth = a + b
+    a = b
+    b = nth
+            </code>
+            <figcaption>
+                The code I whipped together.
+            </figcaption>
+        </figure>
+
+        <p>
+            When run, lo and behold:
+        </p>
+
+        <figure>
+            <code style="display: block; white-space: break-spaces;">
+6
+96
+102
+198
+300
+498
+798
+1296
+2094
+3390
+5484
+8874
+14358
+23232
+37590
+60822
+            </code>
+            <figcaption>
+                And here's the answer.
+            </figcaption>
+        </figure>
+
+        <p>
+            The sixteenth integer in the sequence is quite clearly 60822, which can be interpreted as 06/08/2022.
+            However, this doesn't answer all of the questions.
+        </p>
+
+        <h2>Memory Blank</h2>
+
+        <p>
+            I have no recollection of this particular sequence, nor of the significance of its starting pair. I also
+            don't remember adding this to my calendar. Luckily, at least on that last point there is some evidence left
+            behind. By examining the .ics file in a text editor, we can see the date on which it was created.
+        </p>
+
+        <figure>
+            <img src="2_date.png"
+                alt="The secret metadata hidden within the calendar file. The line highlighted reads CREATED:20170517T142214Z">
+            <figcaption>
+                The event was created on 17/05/2017, which feels like at least two lifetimes ago.
+            </figcaption>
+        </figure>
+
+        <p>
+            Here though, the trail goes cold. Will something strange happen on that day? Probably. Will I ever
+            understand the significance of those number or the sequence they generate? Probably not. When I checked my
+            camera roll for 17/05/2017 I found two photographs of fidget spinners and the SCP logo. I was going to put a
+            link to the logo but apparently the SCP wiki and all wikis hosted on Wikidot have been taken down by
+            hackers.
+        </p>
+    </div>
+
+    <script type="text/javascript" src="/common.js"></script>
+</body>
+
+</html>
