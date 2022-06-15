@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <title>Marley's Blog</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <link rel="shortcut icon" type="image/png" href="/apple-touch-icon.png">
+</head>
+
+<body>
+    <div id="bodywrap">
+        <h1>Marley's Blog</h1>
+
+        <header>
+            <span id="title">Magnetic pixel image transitions</span>
+            <span id="date">08/06/2022</span>
+        </header>
+
+        <h2>Dithering</h2>
+
+        <p>
+            The first step in the process was to apply dithering to the image so that it could approximate greyscale
+            whilst consisting of only black and white pixels. The dithering algorithm used is called <a
+                href="https://en.wikipedia.org/wiki/Floyd–Steinberg_dithering">Floyd–Steinberg dithering</a>.
+            This method works by thresholding each pixel and offsetting the error from that threshold onto its
+            neighbours.
+        </p>
+
+        <!--Colour-->
+        <!--Black and white-->
+        <!--Threshold-->
+        <!--Dithered-->
+
+        <p>
+            Once both the start and finish images have been dithered, we can count the number of black pixels in each,
+            and create a number of particle objects equal to the number of black pixels in the image with the most black
+            pixels.
+        </p>
+
+        <h2 id="p5js">Javascript implementation</h2>
+
+        <p>
+            Although this program was initially implemented in the Processing library for Java, a p5.js implementation
+            was also made which allows this process to be performed in the browser.
+        </p>
+    </div>
+
+    <script type="text/javascript" src="/common.js"></script>
+</body>
+
+</html>
