@@ -3,48 +3,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Marley's CSS beigns */
@@ -57,7 +144,7 @@ h1 {
 }
 
 h2 {
-    font-size:18pt;
+    font-size: 18pt;
     font-weight: 600;
     font-style: italic;
     padding-top: 20px;
@@ -65,7 +152,7 @@ h2 {
 }
 
 h3 {
-    font-size:16pt;
+    font-size: 16pt;
     font-weight: 500;
     font-style: italic;
     padding-top: 20px;
@@ -82,14 +169,14 @@ p {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-	margin: 0 auto;
+    margin: 0 auto;
     background: black;
     color: white;
     vertical-align: middle;
     padding: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 0px;    
+    border: 0px;
 }
 
 #returnHome2 {
@@ -105,13 +192,13 @@ p {
 
 #bodywrap {
     width: 90%;
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .blog {
     border-radius: 10px;
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
     background: #F0F0F0;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -136,6 +223,14 @@ figcaption {
 }
 
 .fourfigs img {
+    width: 49%;
+}
+
+.threefigs img {
+    width: 32%;
+}
+
+.twofigs img {
     width: 49%;
 }
 
@@ -185,16 +280,17 @@ em {
 }
 
 body {
-	font-family: sans-serif;
+    font-family: sans-serif;
     font-size: 13pt;
-	color: black;
-	background-color: white;
+    color: black;
+    background-color: white;
     line-height: 1.6;
+    padding-bottom: 20px;
 }
 
 #title {
     display: block;
-    font-size:20pt;
+    font-size: 20pt;
     /* font-weight: 600; */
     /* font-style: italic; */
     padding-top: 20px;
@@ -209,7 +305,31 @@ body {
     /* padding-bottom: 20px; */
 }
 
-code, var {
+#contents {
+    /* TODO: make this work in light mode */
+    background: rgb(50, 50, 50);
+    float: left;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    /* padding-left: 40px; */
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    /* display: block; */
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-margin-top: 47px;
+}
+
+code,
+var {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -218,35 +338,77 @@ canvas {
     /* position: absolute; 
     left: 0;
     top: 0; */
-  }
+}
 
 footer {
     background: black;
     color: white;
     text-align: center;
     padding-top: 10px;
-    padding-bottom:40px;
+    padding-bottom: 40px;
     margin-top: 10px;
 }
 
+ol {
+    list-style-position: outside;
+    list-style-type: decimal;
+    padding-left: 1.4em;
+}
+
+li>ol {
+    /* margin-left: 10px; */
+}
+
+
+
 @media screen and (min-width: 650px) {
     #bodywrap {
-	    width: 600px;
-	    margin: 0 auto;
+        width: 600px;
+        margin: 0 auto;
     }
+
+    #contents {
+        width: 40%;
+        margin-right: 20px;
+    }
+
     .fourfigs img {
         width: 24%;
     }
+
     footer {
         padding-bottom: 10px;
     }
 }
 
 @media (prefers-color-scheme: dark) {
-	.blog           { color: white; background: rgb(50,50,50); }
-	a               { color: rgb(114, 202, 236); }
-	a:visited       { color: #FF6CFF; }
-	.blog a         { color: white; }
-	.blog a:visited { color: white; }
-	body  { background: rgb(30, 30, 30); color: white; }
+    .blog {
+        color: white;
+        background: rgb(50, 50, 50);
+    }
+
+    a {
+        color: rgb(114, 202, 236);
+    }
+
+    a:visited {
+        color: #FF6CFF;
+    }
+
+    a:not([href]) {
+        color: #ff6c6c;
+    }
+
+    .blog a {
+        color: white;
+    }
+
+    .blog a:visited {
+        color: white;
+    }
+
+    body {
+        background: rgb(30, 30, 30);
+        color: white;
+    }
 }

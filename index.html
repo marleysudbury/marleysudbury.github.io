@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8" name="viewport"
+        content="width=device-width,initial-scale=1">
     <title>Marley's Website</title>
     <link rel="stylesheet" type="text/css" href="/stylesheet.css">
     <link rel="shortcut icon" type="image/png" href="/apple-touch-icon.png">
@@ -14,51 +15,67 @@
         <h1>Marley Sudbury</h1>
 
         <p>
-            Welcome to my website! I have recently graduated from Cardiff University with
-            a first class honours degree (BSc) in computer science. This page contains links to
-            some projects I've worked on. Click on an item to view more details.
+            Welcome to my website! I am a computer science graduate with an
+            interest in data, medicine and much more. This website has
+            information about me and some projects I've worked on. Click on
+            an item below to view more details.
         </p>
 
-        <!--<img src="selfie.jpg" width=100% alt="Photograph of Marley Sudbury smiling into the camera. He is wearing a pinkish orangish shirt."/>-->
+        <img src="me.jpg" width=100% alt="Photograph of Marley Sudbury
+        wearing academic dress at his graduation. He is stood in front of a
+        stone university building." />
 
-        <!--<img src="selfie2_wide.jpg" width=100%
-            alt="Photograph of Marley Sudbury smiling into the camera. He has a shaved head and is stood in front of a blank white wall. He is wearing a green shirt striped with red and blue lines." />-->
+        <div class="blog">
+            <a href="reading">
+                <h2>Reading</h2>
 
-        <img src="me.jpg" width = 100%
-             alt = "Photograph of Marley Sudbury wearing academic dress at his graduation. He is stood in front of a stone university buidling."
-             />
+                <img width="100%" height="100%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRpp0Gq_KvSymds_m7CjZvZy-2pWVgFd0uuqvTteYCTTi1kLhVjAcnTqgn4CbjHIEpzH_LxLF5DDbwy/pubchart?oid=1422310716&amp;format=image"></img>
+                <p>
+                    Over the last two years, I have been trying to read more
+                    books. This page has more information about the books
+                    I've been reading.
+                </p>
+            </a>
+        </div>
 
+        <div class="blog">
+            <a href="https://marleysudbury.github.io/minesweeper-godot/">
+                <h2>Another Minesweeper</h2>
+                <img width="100%" src="newsweeper.png" alt="A half completed game of Minesweeper"/>
+                <p>
+                    I have made another version of Minesweeper. This time in a
+                    game engine called Godot. It can be played in the browser
+                    by clicking here. It is still a work in progress.
+                </p>
+            </a>
+        </div>
 
+        <!--<div class="blog">
+            <a href="blog/2023/03/17">
+                <h2>Making stencilised images in Pixelmator Pro</h2>
+                <figure>
+                    <img class="w49" src="https://upload.wikimedia.org/wikipedia/en/5/55/Barack_Obama_Hope_poster.jpg" alt="" />
+                    <img class="w49" src="blog/2023/03/17/mobama3.jpg" alt="" />
+                </figure>
+                <p>
+                    Making images based on the infamous Obama 'Hope' poster in Pixelmator Pro.
+                </p>
+            </a>
+        </div>-->
 
         <div class="blog">
             <a href="final-year-project/">
                 <h2>Detecting metastatic tissue in lymph nodes with deep learning</h2>
 
                 <figure>
-                    <img src="final-year-project/cover.png"
-                        alt="A pathology image of a lymph node, next to two images showing the classification of the lymph node into positive and negative areas.">
+                    <img src="final-year-project/cover.png" alt="A pathology image of a lymph node, next to two images showing the classification of the lymph node into positive and negative areas.">
                 </figure>
 
                 <p>
-                    Information about my final year project at university.
+                    Information about my final year research project at university.
                 </p>
             </a>
-        </div>
-
-        <!--<div class="blog">
-            <a href="blog/2022/05/20">
-                <h2>Paranormal Events</h2>
-
-                <figure>
-                    <img src="blog/2022/05/20/1_calendar.png"
-                        alt="Event in an Apple calendar on the sixth of August 2022 which reads: Sequence date, Date taken from integer 16 in my Sequence (6, 96)">
-                </figure>
-
-                <p>
-                    Deciphering an odd calendar entry.
-                </p>
-            </a>
-        </div>-->
+        </div> 
 
         <div class="blog">
             <a href="blog/2020/05/28">
@@ -66,12 +83,11 @@
 
                 <figure>
                     <img class="w49" src="blog/2020/05/28/2_Apple.png" alt="A screenshot of the iOS Calculator app.">
-                    <img class="w49" src="blog/2020/05/28/3_Mine.png"
-                        alt="A screenshot of my own calculator app I developed in SwiftUI.">
+                    <img class="w49" src="blog/2020/05/28/3_Mine.png" alt="A screenshot of my own calculator app I developed in SwiftUI.">
                 </figure>
 
                 <p>
-                    I tried developing an app in SwiftUI.
+                    I developed a simple iPhone app in SwiftUI.
                 </p>
             </a>
         </div>
@@ -86,7 +102,7 @@
                 </figure>
 
                 <p>
-                    Minesweeper clone made with MonkeyX for A Level project, then reimagined in Python with Pygame.
+                    A Minesweeper clone originally written in MonkeyX for my A Level project, now reimagined in Python with Pygame.
                 </p>
             </a>
         </div>
@@ -96,54 +112,14 @@
                 <h2>Papa Kirill's Pizzeria</h2>
 
                 <figure>
-                    <img src="https://github.com/marleysudbury/PapaKirill/raw/master/papakirill.PNG"
-                        alt="The home screen of Papa Kirill's Pizzeria. It is in a CMD terminal, with the title and the words 'Start Game (Press Enter)' written in ASCII art. There is also a cat in ASCII art. A copyright notice reads 'COPYRIGHT (C) 1956 Papa Kirill'">
+                    <img src="https://github.com/marleysudbury/PapaKirill/raw/master/papakirill.PNG" alt="The home screen of Papa Kirill's Pizzeria. It is in a CMD terminal, with the title and the words 'Start Game (Press Enter)' written in ASCII art. There is also a cat in ASCII art. A copyright notice reads 'COPYRIGHT (C) 1956 Papa Kirill'">
                 </figure>
 
                 <p>
-                    Text-based adventure game developed in Python as part of a first-year group project.
+                    A text-based adventure game developed in Python as part of a first-year group project at university.
                 </p>
             </a>
         </div>
-
-
-        <!--<div class="blog">
-            <a href="endorsement">
-                <h2>Endorsements</h2>
-
-                <p>
-                    "Marley is doing exceptionally well, demonstrating he is a capable and knowledgeable individual. He
-                    is willing to take on more complex jobs and has no trouble at all performing even the most difficult
-                    tasks our customers can throw at him. He works very well independently and has adapted exteremely
-                    well to challenges around working from home due to the Coronavirus pandemic."—Workplace supervisor
-                </p>
-
-                <p>
-                    "Marley impressed me with his programming project&hellip; Of particular merit in the work was
-                    Marley's use of recusion. An advanced technique that most students shy away from, largely because
-                    most don't understand it, but that was the best way to solve the problem and Marley created some
-                    impressive code as a result."—A level teacher
-                </p>
-
-                <p>
-                    Click to read things people have said about me.
-                </p>
-            </a>
-        </div>
-
-        <div class="blog">
-            <h2>Other links</h2>
-
-            <p>Twitter</p>
-
-            <p>Github</p>
-        </div>
-
-        <div class="blog">
-            <h2>Contact</h2>
-
-            <p>Email: <a href="mailto:SudburyMS@Cardiff.ac.uk">SudburyMS@Cardiff.ac.uk</a></p>
-        </div>-->
     </div>
 </body>
 
