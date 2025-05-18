@@ -15,3 +15,6 @@ Link unread (#0100E4) against background (#FFFFFF): PASS
 Link read (#4F1E86) against background (#FFFFFF): PASS
 Text against card: N/A card is same colour as background
 
+Card colours:
+- Dark mode: #333333
+- Light mode: #EFEFEF

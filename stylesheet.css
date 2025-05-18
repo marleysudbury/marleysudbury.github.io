@@ -307,9 +307,9 @@ body {
 
 #contents {
     /* TODO: make this work in light mode */
-    background: rgb(50, 50, 50);
-    float: left;
-    border-color: #FFFFFF;
+    background: #EFEFEF;
+    /*float: left;*/
+    border-color: #000000;
     border-width: 1px;
     border-style: solid;
     padding: 10px;
@@ -410,5 +410,10 @@ li>ol {
     body {
         background: rgb(30, 30, 30);
         color: white;
+    }
+
+    #contents {
+        background: #333333;
+        border-color: #FFFFFF;
     }
 }
