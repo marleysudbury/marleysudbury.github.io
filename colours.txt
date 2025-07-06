@@ -6,7 +6,9 @@ Text (#FFFFFF) against background (#1F1E1E): PASS
 Link unread (#87C8E8) against background (#1F1E1E): PASS
 Link read (#FF6CFF replacing #9F6AB1) against background (#1F1E1E): PASS
 Text (#FFFFFF) against card (#333333): PASS
-NOTE: Card has low contrast with background (1.29:1). This is potentially a problem.
+
+NOTE: Card has low contrast with background (1.29:1).
+This is potentially a problem.
 
 
 Light Mode
@@ -14,4 +16,6 @@ Text (#000000) against background (#FFFFFF): PASS
 Link unread (#0100E4) against background (#FFFFFF): PASS
 Link read (#4F1E86) against background (#FFFFFF): PASS
 Text (#000000) against card (#EFEFEF): PASS
-NOTE: Card has low contrast with background (1.14:1). This is potentially a problem.
+
+NOTE: Card has low contrast with background (1.14:1).
+This is potentially a problem.
