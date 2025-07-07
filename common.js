@@ -31,7 +31,7 @@ function createContentsBox() {
     // This code autogenerates contents boxes for articles
 
     // Check for presence of more than 1 h2 element
-    const headings = document.querySelectorAll("h2", "h3", "h4");
+    const headings = document.querySelectorAll("h2, h3, h4");
     if (headings.length > 0) {
         // Array to track ids used
         const ids = new Array();
@@ -65,40 +65,60 @@ function createContentsBox() {
                 newLevel = 0;
             } else if (headings[i].nodeName == "H3") {
                 newLevel = 1;
+            } else if (headings[i].nodeName == "H4") {
+                newLevel = 2;
             }
             
             // End sublists if present
             while (listLevel > newLevel) {
-                subLists[subLists.length-2].appendChild(subLists.pop());
+                console.log("Decreasing level");
+                subLists[subLists.length-2].lastChild.appendChild(subLists.pop());
                 listLevel--;
             }
             // Create sublists if required
             while (listLevel < newLevel) {
+                console.log("Increasing level");
                 const newSubList = document.createElement("ol");
+                subLists.push(newSubList);
                 listLevel++;
             }
 
+            // Create the id for the header so it can be hyperlinked
             let headingId = headings[i].innerText;
+            
+            // The id is the text of the header in lowercase with symbols
+            // replaced by underscores
             headingId = headingId.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+            // If the same text is used for multiple headers, add sequential
+            // numbering to differentiate
             let idNumber = 0;
             for (let j = 0; j < ids.length; j++) {
                 if (ids[j] === headingId) {
                     idNumber++;
                 }
             }
+
+            // If header text is unique append nothing
             if (idNumber === 0) {
                 idNumber = "";
             } else {
                 idNumber = "_"+idNumber;
             }
+
             ids.push(headingId);
             headings[i].setAttribute("id", headingId+idNumber);
+
+            // Create hyperlink
             const a = document.createElement("a");
             a.setAttribute("href", "#"+headingId+idNumber);
             a.innerHTML = headings[i].innerText;
             const item = document.createElement("li");
             item.appendChild(a);
-            contentsList.appendChild(item);
+
+            // Add item to list
+            //contentsList.appendChild(item);
+            subLists[subLists.length-1].appendChild(item);
         }
         while (listLevel > 0) {
             subLists[subLists.length-2].appendChild(subLists.pop());
