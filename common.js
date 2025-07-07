@@ -71,13 +71,11 @@ function createContentsBox() {
             
             // End sublists if present
             while (listLevel > newLevel) {
-                console.log("Decreasing level");
                 subLists[subLists.length-2].lastChild.appendChild(subLists.pop());
                 listLevel--;
             }
             // Create sublists if required
             while (listLevel < newLevel) {
-                console.log("Increasing level");
                 const newSubList = document.createElement("ol");
                 subLists.push(newSubList);
                 listLevel++;
