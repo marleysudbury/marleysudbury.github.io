@@ -1,5 +1,5 @@
-// This code puts the "Go home" button on every page except the home page
-if (window.location.pathname != "/") {
+// Home button function
+function createHomeButton() {
     let node = document.createTextNode("Go home");
     let node2 = document.createTextNode("Go home");
     let anchor = document.createElement("a");
@@ -18,9 +18,8 @@ if (window.location.pathname != "/") {
     document.body.prepend(anchor);
 }
 
-// This code autogenerates contents boxes for articles
-// Check that page is not home page
-if (window.location.pathname != "/") {
+// Contents box function
+function createContentsBox() {
     // Check for presence of more than 1 h2 element
     const headings = document.querySelectorAll("h2", "h3", "h4");
     // Create contents div and set id for CSS
@@ -28,3 +27,12 @@ if (window.location.pathname != "/") {
     contents.setAttribute("id", "contents");
     const contentsList = document.createElement("ol");
 }
+
+// This code puts the "Go home" button on every page except the home page
+if (window.location.pathname != "/") {
+    window.addEventListener("DOMContentLoaded", createHomeButton);
+    window.addEventListener("DOMContentLoaded", createContentsBox);
+}
+
+// This code autogenerates contents boxes for articles
+// Check that page is not home page
