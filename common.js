@@ -22,10 +22,33 @@ function createHomeButton() {
 function createContentsBox() {
     // Check for presence of more than 1 h2 element
     const headings = document.querySelectorAll("h2", "h3", "h4");
-    // Create contents div and set id for CSS
-    const contents = document.createElement("div");
-    contents.setAttribute("id", "contents");
-    const contentsList = document.createElement("ol");
+    if (headings.length > 0) {
+        // Create contents div and set id for CSS
+        const contents = document.createElement("div");
+        contents.setAttribute("id", "contents");
+        // Add title to contents box
+        const label = document.createElement("p");
+        label.style.textAlign="center";
+        label.style.fontWeight="bold";
+        label.innerHTML = "Contents";
+        contents.appendChild(label);
+        const contentsList = document.createElement("ol");
+        for (let i = 0; i < headings.length; i++) {
+            if (headings[i].nodeName == "H2") {
+                let headingId = headings[i].innerText;
+                headingId = headingId.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                headings[i].setAttribute("id", headingId);
+                const a = document.createElement("a");
+                a.setAttribute("href", "#"+headingId);
+                a.innerHTML = headings[i].innerText;
+                const item = document.createElement("li");
+                item.appendChild(a);
+                contentsList.appendChild(item);
+            }
+        }
+        contents.appendChild(contentsList);
+        document.getElementById("bodywrap").insertBefore(contents, headings[0]);
+    }
 }
 
 // This code puts the "Go home" button on every page except the home page
