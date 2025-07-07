@@ -306,7 +306,6 @@ body {
 }
 
 #contents {
-    /* TODO: make this work in light mode */
     background: #EFEFEF;
     /*float: left;*/
     border-color: #000000;
@@ -368,7 +367,7 @@ li>ol {
     }
 
     #contents {
-        width: 40%;
+        width: 50%;
         margin-right: 20px;
     }
 
