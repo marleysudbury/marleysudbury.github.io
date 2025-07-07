@@ -23,6 +23,8 @@ function createContentsBox() {
     // Check for presence of more than 1 h2 element
     const headings = document.querySelectorAll("h2", "h3", "h4");
     if (headings.length > 0) {
+        // Array to track ids used
+        const ids = new Array();
         // Create contents div and set id for CSS
         const contents = document.createElement("div");
         contents.setAttribute("id", "contents");
@@ -37,9 +39,21 @@ function createContentsBox() {
             if (headings[i].nodeName == "H2") {
                 let headingId = headings[i].innerText;
                 headingId = headingId.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-                headings[i].setAttribute("id", headingId);
+                let idNumber = 0;
+                for (let j = 0; j < ids.length; j++) {
+                    if (ids[j] === headingId) {
+                        idNumber++;
+                    }
+                }
+                if (idNumber === 0) {
+                    idNumber = "";
+                } else {
+                    idNumber = "_"+idNumber;
+                }
+                ids.push(headingId);
+                headings[i].setAttribute("id", headingId+idNumber);
                 const a = document.createElement("a");
-                a.setAttribute("href", "#"+headingId);
+                a.setAttribute("href", "#"+headingId+idNumber);
                 a.innerHTML = headings[i].innerText;
                 const item = document.createElement("li");
                 item.appendChild(a);
