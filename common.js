@@ -17,3 +17,14 @@ if (window.location.pathname != "/") {
     document.body.prepend(anchor2);
     document.body.prepend(anchor);
 }
+
+// This code autogenerates contents boxes for articles
+// Check that page is not home page
+if (window.location.pathname != "/") {
+    // Check for presence of more than 1 h2 element
+    const headings = document.querySelectorAll("h2", "h3", "h4");
+    // Create contents div and set id for CSS
+    const contents = document.createElement("div");
+    contents.setAttribute("id", "contents");
+    const contentsList = document.createElement("ol");
+}
