@@ -2,7 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+    <meta
+        charset="UTF-8"
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
     <title>Marley's Blog</title>
     <link rel="stylesheet" type="text/css" href="/stylesheet.css">
     <link rel="shortcut icon" type="image/png" href="/apple-touch-icon.png">
@@ -20,21 +24,25 @@
         <h2 id="Background">Background</h2>
 
         <p>
-            Over the past year I worked as part of a group
-            developing a mobile application using <a href="https://reactnative.dev/">React Native</a>. The big advantage
-            of
-            React Native is that you can simply write the app once and have it work on both iOS and Android.
-            To improve my understanding of app development, I thought I'd try making an app in <a
-                href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a>, which is Apple's language for making iOS
-            apps.
+            Over the past year I worked as part of a group developing a mobile
+            application using <a href="https://reactnative.dev/">React
+            Native</a>. The big advantage of React Native is that you can
+            simply write the app once and have it work on both iOS and Android.
+            To improve my understanding of app development, I thought I'd try
+            making an app in <a href=
+            "https://developer.apple.com/swiftui/">SwiftUI</a>, which is
+            Apple's language for making iOS apps.
         </p>
 
         <p>
-            The first step was to update XCode, as I hadn't used it since before SwiftUI was released. This proved to be
-            a fairly difficult step due to a combination of a large download size and a small SSD. After it was up to
-            date, I watched some videos about the language and did the <a
-                href="https://developer.apple.com/tutorials/swiftui/tutorials">official Apple tutorials</a>. Then I felt
-            ready to take a step out on my own.
+            The first step was to update XCode, as I hadn't used it since
+            before SwiftUI was released. This proved to be a fairly difficult
+            step due to a combination of a large download size and a small SSD.
+            After it was up to date, I watched some videos about the language
+            and did the <a href=
+            "https://developer.apple.com/tutorials/swiftui/tutorials">official
+            Apple tutorials</a>. Then I felt ready to take a step out on my
+            own.
         </p>
 
         <figure>
@@ -47,8 +55,9 @@
         <h2 id="Calculator_alligator">Calculator alligator</h2>
 
         <p>
-            I decided on a calculator because it offers some challenges but is not too complex for a first project. In
-            terms of the design of the app, I went for pretty much the stock iOS calculator look.
+            I decided on a calculator because it offers some challenges but is
+            not too complex for a first project. In terms of the design of the
+            app, I went for pretty much the stock iOS calculator look.
         </p>
 
         <figure class="fourfigs">
@@ -62,77 +71,95 @@
         </figure>
 
         <p>
-            The colours are managed using an xcasset catalogue, so they can be modified without changing any code. It
-            also copes brilliantly with dark mode and accessibility features.
+            The colours are managed using an xcasset catalogue, so they can be
+            modified without changing any code. It also copes brilliantly with
+            dark mode and accessibility features.
         </p>
 
         <figure>
             <img width="100%" src="8_Colors.png">
             <figcaption>
-                The xcasset catalogue used to manage the different colours used througout the app.
+                The xcasset catalogue used to manage the different colours used
+                throughout the app.
             </figcaption>
         </figure>
 
         <p>
-            Once the design was mostly done, it was time to implement the functionality. Whilst the adding,
-            subtracting etc. were simple to implement, getting it working with the interface was a bit tricky.
-            One of the saving graces was using EnvironmentObjects to store data that needed to be accessed throughout
-            the
-            app (such as the display value). I implemented this in a class called DataStoreXD, instantiated as appData.
+            Once the design was mostly done, it was time to implement the
+            functionality. Whilst the adding, subtracting etc. were simple to
+            implement, getting it working with the interface was a bit tricky.
+            One of the saving graces was using EnvironmentObjects to store data
+            that needed to be accessed throughout the app (such as the display
+            value). I implemented this in a class called DataStoreXD,
+            instantiated as appData.
         </p>
 
         <h2 id="Bugs">Bugs!</h2>
 
         <p>
-            I will now tell you about some of the bugs I encountered, as a cautionary tale. The first bug was that <a
-                href="https://github.com/marleysudbury/swiftui-calculator/issues/1">if a
-                calculation resulted in a value greater than 999 it would crash the app</a>, even though the user could
-            manually type a number much large than that with no issue. This really stumped me, until I explained the
-            issue to someone and it immediately clicked in my head that 1000 was the first value being displayed with
-            commas in it. Even once I had figured this out, it took me a while to understand why this was crashing the
-            app. It was because the commas were being added in two places, and the second was expecting to receive a
-            number not a string. At least I could solve the problem using only
-            the backspace key.
+            I will now tell you about some of the bugs I encountered, as a
+            cautionary tale. The first bug was that <a href=
+            "https://github.com/marleysudbury/swiftui-calculator/issues/1">if
+            a calculation resulted in a value greater than 999 it would crash
+            the app</a>, even though the user could manually type a number much
+            large than that with no issue. This really stumped me, until I
+            explained the issue to someone and it immediately clicked in my
+            head that 1000 was the first value being displayed with commas in
+            it. Even once I had figured this out, it took me a while to
+            understand why this was crashing the app. It was because the commas
+            were being added in two places, and the second was expecting to
+            receive a number not a string. At least I could solve the problem
+            using only the backspace key.
         </p>
 
         <p>
-            Another bug was that if the user typed a number, then pressed an operation button, then entered the same
-            number, <a href="https://github.com/marleysudbury/swiftui-calculator/issues/10">any additional input would
-                override the value</a>. This is as a result of a cheeky thing I was doing where I would compare the
-            current screen value to the cached value to see if the value should be overrided (as it should be if
-            the value is 0 or if an operation button has been pressed). The solution to this was to remove that silly
-            logic and add a global flag to determine if input should override the value.
+            Another bug was that if the user typed a number, then pressed an
+            operation button, then entered the same number, <a href=
+            "https://github.com/marleysudbury/swiftui-calculator/issues/10">any
+            additional input would override the value</a>. This is as a result
+            of a cheeky thing I was doing where I would compare the current
+            screen value to the cached value to see if the value should be
+            overridden (as it should be if the value is 0 or if an operation
+            button has been pressed). The solution to this was to remove that
+            silly logic and add a global flag to determine if input should
+            override the value.
         </p>
 
         <p>
-            I also had quite a bit of trouble with <a
-                href="https://github.com/marleysudbury/swiftui-calculator/issues/2">getting the value to be constrained
-                in length</a>. This was essentially a problem with using &lt; rather than &leq;, AKA off by one error
-            (OBOE).
+            I also had quite a bit of trouble with <a href=
+            "https://github.com/marleysudbury/swiftui-calculator/issues/2"
+            >getting the value to be constrained in length</a>. This was
+            essentially a problem with using &lt; rather than &leq;, AKA off by
+            one error (OBOE).
         </p>
 
         <h2 id="In_conclusion">In conclusion&hellip;</h2>
 
         <p>
-            Other than that, though, things pretty much went without a hitch. I may do some more work on it, fixing any
-            bugs that appear, improving the splash screen and the icon, and maybe making the style a bit more unique.
-            However, I feel like I have already spent quite a large amount of time on this given that it isn't really
-            that useful. In conclusion, I am a big fan of Swift and SwiftUI, and I hope I can use them on similar
-            projects in the future. Maybe even something that's slightly interesting.
+            Other than that, though, things pretty much went without a hitch. I
+            may do some more work on it, fixing any bugs that appear, improving
+            the splash screen and the icon, and maybe making the style a bit
+            more unique. However, I feel like I have already spent quite a
+            large amount of time on this given that it isn't really that
+            useful. In conclusion, I am a big fan of Swift and SwiftUI, and I
+            hope I can use them on similar projects in the future. Maybe even
+            something that's slightly interesting.
         </p>
 
         <figure>
             <img width="49%" src="2_Apple.png">
             <img width="49%" src="3_Mine.png">
             <figcaption>
-                Left: the iOS calculator (c) Apple. Right: the app I made. As you can see, there are some subtle
-                differences.
+                Left: the iOS calculator &copy; Apple. Right: the app I made.
+                As you can see, there are some subtle differences.
             </figcaption>
         </figure>
 
         <p>
-            Thanks for reading! If you wish to continue this magical journey, head over to <a
-                href="https://github.com/marleysudbury/swiftui-calculator">the GitHub repo</a>.
+            Thanks for reading! If you wish to continue this magical journey,
+            head over to <a href=
+            "https://github.com/marleysudbury/swiftui-calculator">the GitHub
+            repo</a>.
         </p>
     </div>
 
