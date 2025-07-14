@@ -28,7 +28,7 @@ function createHomeButton() {
 
 // Contents box function
 function createContentsBox() {
-    // This code autogenerates contents boxes for articles
+    // This code automatically generates contents boxes for articles
 
     // Check for presence of more than 1 h2 element
     const headings = document.querySelectorAll("h2, h3, h4");
@@ -50,7 +50,7 @@ function createContentsBox() {
         label.innerHTML = "Contents";
         contents.appendChild(label);
 
-        // Array for any sublists which need to be created
+        // Array for any sub-lists which need to be created
         const subLists = new Array();
 
         // Create contents list
@@ -69,12 +69,12 @@ function createContentsBox() {
                 newLevel = 2;
             }
             
-            // End sublists if present
+            // End sub-lists if present
             while (listLevel > newLevel) {
                 subLists[subLists.length-2].lastChild.appendChild(subLists.pop());
                 listLevel--;
             }
-            // Create sublists if required
+            // Create sub-lists if required
             while (listLevel < newLevel) {
                 const newSubList = document.createElement("ol");
                 subLists.push(newSubList);
@@ -115,13 +115,14 @@ function createContentsBox() {
             item.appendChild(a);
 
             // Add item to list
-            //contentsList.appendChild(item);
             subLists[subLists.length-1].appendChild(item);
         }
+
         while (listLevel > 0) {
             subLists[subLists.length-2].appendChild(subLists.pop());
             listLevel--;
         }
+
         // Add list to contents box
         contents.appendChild(contentsList);
         
