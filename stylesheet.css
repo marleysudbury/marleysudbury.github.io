@@ -6,6 +6,8 @@
     --text: #000000;
     --url-unvisited: #0000E4;
     --url-visited: #4E1E85;
+    --button-text: #FFFFFF;
+    --button-base: #000000;
 
     @media (prefers-color-scheme: dark) {
         --base: #1E1E1E;
@@ -188,8 +190,8 @@ p {
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
-    background: black;
-    color: white;
+    background: var(--button-base);
+    color: var(--button-text);
     vertical-align: middle;
     padding: 0px;
     padding-top: 10px;
@@ -203,7 +205,7 @@ p {
 }
 
 #returnHome a {
-    color: white;
+    color: var(--button-text);
     text-decoration: none;
     font-size: 30px;
 }
@@ -411,40 +413,3 @@ blockquote {
         padding-bottom: 10px;
     }
 }
-
-/*@media (prefers-color-scheme: dark) {
-    .blog {
-        color: white;
-        background: rgb(50, 50, 50);
-    }
-
-    a {
-        color: rgb(114, 202, 236);
-    }
-
-    a:visited {
-        color: #FF6CFF;
-    }
-
-    a:not([href]) {
-        color: #ff6c6c;
-    }
-
-    .blog a {
-        color: white;
-    }
-
-    .blog a:visited {
-        color: white;
-    }
-
-    body {
-        background: rgb(30, 30, 30);
-        color: white;
-    }
-
-    #contents {
-        background: #333333;
-        border-color: #FFFFFF;
-    }
-}*/
